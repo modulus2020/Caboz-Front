@@ -1,9 +1,23 @@
 import "./App.css";
-import "./assets/css/bootstrap.min.css"
-import "./assets/css/style.css"
-import "./assets/css/aos.css"
-import "./assets/css/offcanvas.css"
-import "./assets/fonts/fontawesome-free-6.1.1-web/css/all.css"
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/style.css";
+import "./assets/css/aos.css";
+import "./assets/css/offcanvas.css";
+import "./assets/fonts/fontawesome-free-6.1.1-web/css/all.css";
+import solicon from "./assets/images/sol-icon.png";
+import user from "./assets/images/user.png";
+import magicEden from "./assets/images/magiceden.png";
+import OpenSea from "./assets/images/opensea.png";
+import deGod from "./assets/images/projects/degods.png";
+import deMan from "./assets/images/projects/inkworklabs.png"
+import blockSmith from "./assets/images/projects/blocksmithlabs.png"
+import cetsonCreck from "./assets/images/projects/cetsoncreck.png"
+import okayBears from "./assets/images/projects/okaybears.png"
+import trippinApe from "./assets/images/projects/trippinapetribe.png"
+import froots from "./assets/images/projects/froots.png"
+import aurory from "./assets/images/projects/aurory.png"
+import vandalCity from "./assets/images/projects/vandalcity.png"
+import gothicdegens from "./assets/images/projects/gothicdegens.png"
 
 function App() {
   return (
@@ -38,7 +52,7 @@ function App() {
 
       <div className="App">
         {/* <!-- Loading --> */}
-        <div id="overlay" style={{display:"none"}}>
+        <div id="overlay" style={{ display: "none" }}>
           <div className="spinner"></div>
           <br />
           Loading...
@@ -78,30 +92,32 @@ function App() {
                         <td className="px-2">
                           <table width="100%">
                             <tbody>
-                            <tr>
-                              <td>Available SOL</td>
-                              <td className="text-right">
-                                <img
-                                  src="./assets/images/sol-icon.png"
-                                  className="sol-icon"
-                                />{" "}
-                                74.3243
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Locked SOL</td>
-                              <td className="text-right">
-                                <img
-                                  src="./assets/images/sol-icon.png"
-                                  className="sol-icon"
-                                />{" "}
-                                46.8918
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Active Trades</td>
-                              <td className="text-right">08</td>
-                            </tr>
+                              <tr>
+                                <td>Available SOL</td>
+                                <td className="text-right">
+                                  <img
+                                    src={solicon}
+                                    className="sol-icon"
+                                    alt="sol-icon"
+                                  />{" "}
+                                  74.3243
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Locked SOL</td>
+                                <td className="text-right">
+                                  <img
+                                    src={solicon}
+                                    className="sol-icon"
+                                    alt="sol-icon"
+                                  />{" "}
+                                  46.8918
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Active Trades</td>
+                                <td className="text-right">08</td>
+                              </tr>
                             </tbody>
                           </table>
                         </td>
@@ -242,30 +258,32 @@ function App() {
                         <a className="dropdown-item menuli">
                           <table width="100%">
                             <tbody>
-                            <tr>
-                              <td>Available SOL</td>
-                              <td className="text-right">
-                                <img
-                                  src="./assets/images/sol-icon.png"
-                                  className="sol-icon"
-                                />{" "}
-                                74.3243
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Locked SOL</td>
-                              <td className="text-right">
-                                <img
-                                  src="./assets/images/sol-icon.png"
-                                  className="sol-icon"
-                                />{" "}
-                                46.8918
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Active Trades</td>
-                              <td className="text-right">08</td>
-                            </tr>
+                              <tr>
+                                <td>Available SOL</td>
+                                <td className="text-right">
+                                  <img
+                                    src={solicon}
+                                    className="sol-icon"
+                                    alt="sol-icon"
+                                  />{" "}
+                                  74.3243
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Locked SOL</td>
+                                <td className="text-right">
+                                  <img
+                                    src={solicon}
+                                    className="sol-icon"
+                                    alt="sol-icon"
+                                  />{" "}
+                                  46.8918
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Active Trades</td>
+                                <td className="text-right">08</td>
+                              </tr>
                             </tbody>
                           </table>
                         </a>
@@ -324,11 +342,7 @@ function App() {
         <main className="container">
           {/* <!-- Intoduction --> */}
           <div className="caboz text-center">
-            <h3
-              className="display-3 fw-bold inlineblock aos-init"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
+            <h3 className="display-3 fw-bold inlineblock aos-init">
               Place multiple limit orders
               <br />
               powered by buyer's market and CP
@@ -338,8 +352,6 @@ function App() {
               href="./market.php"
               className="btn-index btn btn-dark btn-lg rounded-3 aos-init shadow-none mb-4 mx-3 inlineblock"
               type="button"
-              data-aos="fade-up"
-              data-aos-duration="3000"
             >
               Market&nbsp;&nbsp;<i className="fa-solid fa-table-list"></i>
             </a>
@@ -347,86 +359,80 @@ function App() {
               href="./create-order.php"
               className="btn-index btn btn-dark btn-lg rounded-3 aos-init shadow-none mb-4 mx-3 inlineblock"
               type="button"
-              data-aos="fade-up"
-              data-aos-duration="3000"
             >
               Create Order&nbsp;&nbsp;<i className="fa-solid fa-plus"></i>
             </a>
           </div>
           {/* <!-- Featured Project --> */}
-          <div
-            className="project-feature aos-init mb-4"
-            data-aos="zoom-in"
-            data-aos-duration="3000"
-          >
+          <div className="project-feature aos-init mb-4">
             <div className="project-feature-inner">
               <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 gx-0">
                 <div className="col col-xs-1 col-md-7 col-lg-7 px-4 py-4">
                   <table className="table table-borderless white-text my-0">
                     <tbody>
-                    <tr>
-                      <td width="40%">
-                        <a href="./project.php?proj=Inkwork Labs">
-                          <img
-                            src="./assets/images/user.png"
-                            alt=""
-                            width="150"
-                            className="img-fluid rounded-circle shadow-sm mx-auto d-block"
-                          />
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="./project.php?proj=Inkwork Labs"
-                          className="project-title-link"
-                        >
-                          <h4>Inkwork Labs</h4>
-                        </a>
-                        <p>
-                          Buy a Inkwork Labs NFT to get discount on trading fees
-                          and enjoy more privileges!
-                        </p>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td width="40%">
+                          <a href="./project.php?proj=Inkwork Labs">
+                            <img
+                              src={user}
+                              alt="user icon"
+                              width="150"
+                              className="img-fluid rounded-circle shadow-sm mx-auto d-block"
+                            />
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="./project.php?proj=Inkwork Labs"
+                            className="project-title-link"
+                          >
+                            <h4>Inkwork Labs</h4>
+                          </a>
+                          <p>
+                            Buy a Inkwork Labs NFT to get discount on trading
+                            fees and enjoy more privileges!
+                          </p>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
                 <div className="col col-xs-1 col-md-5 col-lg-5 left-details px-4 py-4">
                   <table className="table table-borderless white-text">
                     <tbody>
-                    <tr>
-                      <td>
-                        <h4>Buy On</h4>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="text-center">
-                        <a
-                          className="btn btn-dark btn-md rounded-3 shadow-none mx-2 mt-3"
-                          type="button"
-                        >
-                          Magic Eden{" "}
-                          <img
-                            src="./assets/images/magiceden.png"
-                            alt=""
-                            style={{height: "15px"}}
-                            className="mx-2"
-                          />
-                        </a>
-                        <a
-                          className="btn btn-dark btn-md rounded-3 shadow-none mx-2 mt-3"
-                          type="button"
-                        >
-                          OpenSea{" "}
-                          <img
-                            src="./assets/images/opensea.png"
-                            alt=""
-                            style={{height: "17px"}}
-                            className="mx-2"
-                          />
-                        </a>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td>
+                          <h4>Buy On</h4>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-center">
+                          <a
+                            className="btn btn-dark btn-md rounded-3 shadow-none mx-2 mt-3"
+                            type="button"
+                          >
+                            Magic Eden{" "}
+                            <img
+                              src={magicEden}
+                              alt="magic Eden"
+                              style={{ height: "15px" }}
+                              className="mx-2"
+                            />
+                          </a>
+                          <a
+                            className="btn btn-dark btn-md rounded-3 shadow-none mx-2 mt-3"
+                            type="button"
+                          >
+                            OpenSea{" "}
+                            <img
+                              src={OpenSea}
+                              alt="Open Sea"
+                              style={{ height: "17px" }}
+                              className="mx-2"
+                            />
+                          </a>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -434,27 +440,23 @@ function App() {
             </div>
           </div>
           {/* <!-- Stats --> */}
-          <div
-            className="row row-cols-xs-2 row-cols-sm-2 row-cols-md-5 row-cols-lg-5 row-colsxxl-5 mt-4 aos-init"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
+          <div className="row row-cols-xs-2 row-cols-sm-2 row-cols-md-5 row-cols-lg-5 row-colsxxl-5 mt-4 aos-init">
             <div className="col mb-4">
               <div className="stats px-1 py-1">
                 <table className="table table-borderless white-text my-0">
                   <tbody>
-                  <tr>
-                    <td>
-                      <i className="fa-solid fa-arrow-trend-down text-red"></i>
-                    </td>
-                    <td className="text-right">
-                      EST. MCAP
-                      <br />
-                      <span className="num">805.6M</span>
-                      <br />
-                      <small className="text-red">-1.67%</small>
-                    </td>
-                  </tr>
+                    <tr>
+                      <td>
+                        <i className="fa-solid fa-arrow-trend-down text-red"></i>
+                      </td>
+                      <td className="text-right">
+                        EST. MCAP
+                        <br />
+                        <span className="num">805.6M</span>
+                        <br />
+                        <small className="text-red">-1.67%</small>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -462,82 +464,86 @@ function App() {
             <div className="col mb-4">
               <div className="stats px-1 py-1">
                 <table className="table table-borderless white-text my-0">
-                  <tr>
-                    <td>
-                      <i className="fa-solid fa-arrow-trend-up text-green"></i>
-                    </td>
-                    <td className="text-right">
-                      SOL Price
-                      <br />
-                      <span className="num">$40.51</span>
-                      <br />
-                      <small className="text-green">+1.67%</small>
-                    </td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <i className="fa-solid fa-arrow-trend-up text-green"></i>
+                      </td>
+                      <td className="text-right">
+                        SOL Price
+                        <br />
+                        <span className="num">$40.51</span>
+                        <br />
+                        <small className="text-green">+1.67%</small>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
             <div className="col mb-4">
               <div className="stats px-1 py-1">
                 <table className="table table-borderless white-text my-0">
-                  <tr>
-                    <td>
-                      <i className="fa-solid fa-arrow-right-long"></i>
-                    </td>
-                    <td className="text-right">
-                      TPS
-                      <br />
-                      <span className="num">2,472</span>
-                      <br />
-                      <br />
-                    </td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <i className="fa-solid fa-arrow-right-long"></i>
+                      </td>
+                      <td className="text-right">
+                        TPS
+                        <br />
+                        <span className="num">2,472</span>
+                        <br />
+                        <br />
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
             <div className="col mb-4">
               <div className="stats px-1 py-1">
                 <table className="table table-borderless white-text my-0">
-                  <tr>
-                    <td>
-                      <i className="fa-solid fa-arrow-trend-down text-red"></i>
-                    </td>
-                    <td className="text-right">
-                      24H Volume
-                      <br />
-                      <span className="num">2.123M</span>
-                      <br />
-                      <small className="text-red">-3.32%</small>
-                    </td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <i className="fa-solid fa-arrow-trend-down text-red"></i>
+                      </td>
+                      <td className="text-right">
+                        24H Volume
+                        <br />
+                        <span className="num">2.123M</span>
+                        <br />
+                        <small className="text-red">-3.32%</small>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
             <div className="col mb-4">
               <div className="stats px-1 py-1">
                 <table className="table table-borderless white-text my-0">
-                  <tr>
-                    <td>
-                      <i className="fa-solid fa-arrow-trend-up text-green"></i>
-                    </td>
-                    <td className="text-right">
-                      7D Volume
-                      <br />
-                      <span className="num">16.52M</span>
-                      <br />
-                      <small className="text-green">+4.67%</small>
-                    </td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <i className="fa-solid fa-arrow-trend-up text-green"></i>
+                      </td>
+                      <td className="text-right">
+                        7D Volume
+                        <br />
+                        <span className="num">16.52M</span>
+                        <br />
+                        <small className="text-green">+4.67%</small>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
           </div>
           {/* <!-- Top Projects --> */}
-          <div
-            className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-colsxxl-3 aos-init"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
+          <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-colsxxl-3 aos-init">
             {/* <!-- Popular Collections --> */}
             <div className="col col-xs-1">
               <div className="top-projects px-1 py-1 mb-4">
@@ -561,8 +567,8 @@ function App() {
                           className="project-link"
                         >
                           <img
-                            src="./assets/images/projects/degods.png"
-                            alt=""
+                            src={deGod}
+                            alt="deGods"
                             className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
@@ -580,15 +586,17 @@ function App() {
                               <br />
                               Floor{" "}
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               324.75
                             </div>
                             <div className="col-5 text-right text-small">
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               2264.52
                               <br />
@@ -613,7 +621,7 @@ function App() {
                           className="project-link"
                         >
                           <img
-                            src="./assets/images/projects/inkworklabs.png"
+                            src={deMan}
                             alt=""
                             className="img-fluid mx-auto d-block proj-img"
                           />
@@ -632,15 +640,17 @@ function App() {
                               <br />
                               Floor{" "}
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               16.25
                             </div>
                             <div className="col-5 text-right text-small">
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               1173.00
                               <br />
@@ -665,8 +675,8 @@ function App() {
                           className="project-link"
                         >
                           <img
-                            src="./assets/images/projects/blocksmithlabs.png"
-                            alt=""
+                            src={blockSmith}
+                            alt="block smith"
                             className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
@@ -684,15 +694,17 @@ function App() {
                               <br />
                               Floor{" "}
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               75
                             </div>
                             <div className="col-5 text-right text-small">
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               913.00
                               <br />
@@ -734,8 +746,8 @@ function App() {
                           className="project-link"
                         >
                           <img
-                            src="./assets/images/projects/cetsoncreck.png"
-                            alt=""
+                            src={cetsonCreck}
+                            alt="cetsonCreck"
                             className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
@@ -753,15 +765,17 @@ function App() {
                               <br />
                               Floor{" "}
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               36
                             </div>
                             <div className="col-5 text-right text-small">
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               34.5
                               <br />
@@ -786,8 +800,8 @@ function App() {
                           className="project-link"
                         >
                           <img
-                            src="./assets/images/projects/okaybears.png"
-                            alt=""
+                            src={okayBears}
+                            alt="okayBears"
                             className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
@@ -805,15 +819,17 @@ function App() {
                               <br />
                               Floor{" "}
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               69.75
                             </div>
                             <div className="col-5 text-right text-small">
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               64.5
                               <br />
@@ -838,7 +854,7 @@ function App() {
                           className="project-link"
                         >
                           <img
-                            src="./assets/images/projects/trippinapetribe.png"
+                            src={trippinApe}
                             alt=""
                             className="img-fluid mx-auto d-block proj-img"
                           />
@@ -857,15 +873,17 @@ function App() {
                               <br />
                               Floor{" "}
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               11.45
                             </div>
                             <div className="col-5 text-right text-small">
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
+                                alt="sol icon"
                               />{" "}
                               9.1
                               <br />
@@ -907,7 +925,7 @@ function App() {
                           className="project-link"
                         >
                           <img
-                            src="./assets/images/projects/froots.png"
+                            src={froots}
                             alt=""
                             className="img-fluid mx-auto d-block proj-img"
                           />
@@ -926,7 +944,7 @@ function App() {
                               <br />
                               Floor{" "}
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
                               />{" "}
                               3.65
@@ -953,7 +971,7 @@ function App() {
                           className="project-link"
                         >
                           <img
-                            src="./assets/images/projects/aurory.png"
+                            src={aurory}
                             alt=""
                             className="img-fluid mx-auto d-block proj-img"
                           />
@@ -972,7 +990,7 @@ function App() {
                               <br />
                               Floor{" "}
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
                               />{" "}
                               16.25
@@ -999,7 +1017,7 @@ function App() {
                           className="project-link"
                         >
                           <img
-                            src="./assets/images/projects/vandalcity.png"
+                            src={vandalCity}
                             alt=""
                             className="img-fluid mx-auto d-block proj-img"
                           />
@@ -1018,7 +1036,7 @@ function App() {
                               <br />
                               Floor{" "}
                               <img
-                                src="./assets/images/sol-icon.png"
+                                src={solicon}
                                 className="sol-icon"
                               />{" "}
                               7.5
@@ -1041,11 +1059,7 @@ function App() {
             </div>
           </div>
           {/* <!-- Collections -->/ */}
-          <div
-            className="row collections row-cols-1 mb-4 aos-init gx-0 pb-4"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
-          >
+          <div className="row collections row-cols-1 mb-4 aos-init gx-0 pb-4">
             {/* <!-- Active Collections --> */}
             <div className="px-2 py-4">
               <h3 className="float-left mx-2">Active Collections</h3>
@@ -1085,7 +1099,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/degods.png"
+                              src={deGod}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1096,14 +1110,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           324.75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           311
@@ -1120,7 +1134,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/trippinapetribe.png"
+                              src={trippinApe}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1133,14 +1147,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           11.45
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           9.1
@@ -1157,7 +1171,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/inkworklabs.png"
+                              src={deMan}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1168,14 +1182,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           16.25
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           14.5
@@ -1192,7 +1206,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/froots.png"
+                              src={froots}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1203,14 +1217,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           3.65
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           2.95
@@ -1227,7 +1241,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/blocksmithlabs.png"
+                              src={blockSmith}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1240,14 +1254,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           69
@@ -1264,7 +1278,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/vandalcity.png"
+                              src={vandalCity}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1275,14 +1289,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           324.75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           311
@@ -1299,7 +1313,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/okaybears.png"
+                              src={okayBears}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1310,14 +1324,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           11.45
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           9.1
@@ -1334,7 +1348,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/aurory.png"
+                              src={aurory}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1345,14 +1359,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           16.25
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           14.5
@@ -1369,7 +1383,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/gothicdegens.png"
+                              src={gothicdegens}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1380,14 +1394,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           3.65
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           2.95
@@ -1404,7 +1418,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/cetsoncreck.png"
+                              src={cetsonCreck}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1415,14 +1429,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           69
@@ -1464,7 +1478,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/vandalcity.png"
+                              src={vandalCity}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1475,14 +1489,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           324.75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           311
@@ -1499,7 +1513,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/okaybears.png"
+                              src={okayBears}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1510,14 +1524,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           11.45
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           9.1
@@ -1534,7 +1548,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/aurory.png"
+                              src={aurory}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1545,14 +1559,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           16.25
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           14.5
@@ -1569,7 +1583,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/gothicdegens.png"
+                              src={gothicdegens}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1580,14 +1594,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           3.65
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           2.95
@@ -1604,7 +1618,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/cetsoncreck.png"
+                              src={cetsonCreck}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1615,14 +1629,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           69
@@ -1635,11 +1649,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div
-            className="row collections row-cols-1 mb-4 aos-init gx-0 pb-4 mb-5"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
+          <div className="row collections row-cols-1 mb-4 aos-init gx-0 pb-4 mb-5">
             {/* <!-- Active Collections --> */}
             <div className="px-2 py-4">
               <h3 className="float-left mx-2">Trending Collections</h3>
@@ -1679,7 +1689,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/degods.png"
+                              src={deGod}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1690,14 +1700,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           324.75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           311
@@ -1714,7 +1724,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/trippinapetribe.png"
+                              src={trippinApe}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1727,14 +1737,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           11.45
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           9.1
@@ -1751,7 +1761,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/inkworklabs.png"
+                              src={deMan}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1762,14 +1772,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           16.25
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           14.5
@@ -1786,7 +1796,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/froots.png"
+                              src={froots}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1797,14 +1807,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           3.65
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           2.95
@@ -1821,7 +1831,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/blocksmithlabs.png"
+                              src={blockSmith}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1834,14 +1844,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           69
@@ -1858,7 +1868,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/vandalcity.png"
+                              src={vandalCity}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1869,14 +1879,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           324.75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           311
@@ -1904,14 +1914,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           11.45
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           9.1
@@ -1928,7 +1938,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/aurory.png"
+                              src={aurory}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1939,14 +1949,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           16.25
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           14.5
@@ -1963,7 +1973,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/gothicdegens.png"
+                              src={gothicdegens}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -1974,14 +1984,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           3.65
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           2.95
@@ -2009,14 +2019,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           69
@@ -2058,7 +2068,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/vandalcity.png"
+                              src={vandalCity}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -2069,14 +2079,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           324.75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           311
@@ -2093,7 +2103,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/okaybears.png"
+                              src={okayBears}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -2104,14 +2114,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           11.45
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           9.1
@@ -2128,7 +2138,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/aurory.png"
+                              src={aurory}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -2139,14 +2149,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           16.25
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           14.5
@@ -2163,7 +2173,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/gothicdegens.png"
+                              src={gothicdegens}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -2174,14 +2184,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           3.65
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           2.95
@@ -2198,7 +2208,7 @@ function App() {
                         <td className="valign-mid">
                           <a href="#" className="project-link">
                             <img
-                              src="./assets/images/projects/cetsoncreck.png"
+                              src={cetsonCreck}
                               alt=""
                               className="img-fluid mx-auto d-block proj-img"
                             />
@@ -2209,14 +2219,14 @@ function App() {
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           75
                         </td>
                         <td className="text-right valign-mid">
                           <img
-                            src="./assets/images/sol-icon.png"
+                            src={solicon}
                             className="sol-icon"
                           />{" "}
                           69
