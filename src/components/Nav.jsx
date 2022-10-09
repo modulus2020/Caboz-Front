@@ -7,6 +7,8 @@ const Nav = () => {
   const [toggleFullscreenNav, setToggleFullscreenNav] = useState(false);
   const [toggleSmallNav, setToggleSmallNav] = useState(false);
   const [collapseNav, setCollapseNav] = useState(false);
+  const [fullScreenOrder, setFullScreenOrder] = useState(false);
+  const [smallScreenOrder, setSmallScreenOrder] = useState(false);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
@@ -151,10 +153,12 @@ const Nav = () => {
                   href="#"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  onClick={()=> setFullScreenOrder(!fullScreenOrder)}
                 >
                   Orders
                 </a>
-                <ul className="dropdown-menu dropdown-menu-dark ">
+                {fullScreenOrder ? (
+                <ul className="dropdown-menu dropdown-menu-dark " style={{display: "block"}}>
                   <li>
                     <a
                       className="dropdown-item"
@@ -169,6 +173,7 @@ const Nav = () => {
                     </a>
                   </li>
                 </ul>
+                ) : null}
               </li>
               <li className="nav-item">
                 <a
@@ -314,12 +319,12 @@ const Nav = () => {
                   <a
                     className="nav-link dropdown-toggle px-4 text-white main-links"
                     href="#"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    onClick={()=> setSmallScreenOrder(!smallScreenOrder)}
                   >
                     Orders
                   </a>
-                  <ul className="dropdown-menu dropdown-menu-dark ">
+                  {smallScreenOrder ? (
+                  <ul className="dropdown-menu dropdown-menu-dark" style={{display: "block"}}>
                     <li>
                       <a
                         className="dropdown-item"
@@ -334,6 +339,7 @@ const Nav = () => {
                       </a>
                     </li>
                   </ul>
+                    ) : null}
                 </li>
                 <li className="nav-item">
                   <a
