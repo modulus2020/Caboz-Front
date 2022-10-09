@@ -22,3 +22,7 @@
         display: none!important;
     }
 }
+
+#sol-icon{
+    display: inline-block;
+}

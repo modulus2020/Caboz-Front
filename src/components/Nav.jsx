@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import solicon from "../assets/images/sol-icon.png";
 import "../App.css";
+import { useParams, Link } from "react-router-dom";
 
 const Nav = () => {
   const [toggleLargeNav, setToggleLargeNav] = useState(false);
@@ -9,6 +10,8 @@ const Nav = () => {
   const [collapseNav, setCollapseNav] = useState(false);
   const [fullScreenOrder, setFullScreenOrder] = useState(false);
   const [smallScreenOrder, setSmallScreenOrder] = useState(false);
+  // let {id} = useParams();
+  // console.log(useParams());
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
@@ -140,19 +143,16 @@ const Nav = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item">
-                <a
-                  href="./collection.php"
+                <Link
+                  to={"/collection"}
                   className="nav-link px-4 text-white main-links"
                 >
                   Collections
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle px-4 text-white main-links"
-                  href="#"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
                   onClick={()=> setFullScreenOrder(!fullScreenOrder)}
                 >
                   Orders
