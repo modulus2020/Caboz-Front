@@ -9,15 +9,16 @@ import user from "./assets/images/user.png";
 import magicEden from "./assets/images/magiceden.png";
 import OpenSea from "./assets/images/opensea.png";
 import deGod from "./assets/images/projects/degods.png";
-import deMan from "./assets/images/projects/inkworklabs.png"
-import blockSmith from "./assets/images/projects/blocksmithlabs.png"
-import cetsonCreck from "./assets/images/projects/cetsoncreck.png"
-import okayBears from "./assets/images/projects/okaybears.png"
-import trippinApe from "./assets/images/projects/trippinapetribe.png"
-import froots from "./assets/images/projects/froots.png"
-import aurory from "./assets/images/projects/aurory.png"
-import vandalCity from "./assets/images/projects/vandalcity.png"
-import gothicdegens from "./assets/images/projects/gothicdegens.png"
+import deMan from "./assets/images/projects/inkworklabs.png";
+import blockSmith from "./assets/images/projects/blocksmithlabs.png";
+import cetsonCreck from "./assets/images/projects/cetsoncreck.png";
+import okayBears from "./assets/images/projects/okaybears.png";
+import trippinApe from "./assets/images/projects/trippinapetribe.png";
+import froots from "./assets/images/projects/froots.png";
+import aurory from "./assets/images/projects/aurory.png";
+import vandalCity from "./assets/images/projects/vandalcity.png";
+import gothicdegens from "./assets/images/projects/gothicdegens.png";
+import Nav from "./components/Nav";
 
 function App() {
   return (
@@ -60,283 +61,7 @@ function App() {
         {/* <!-- Header --> */}
         <header>
           {/* <!-- Main Navigation --> */}
-          <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-            <div className="container container-relative">
-              <a className="navbar-brand" href="./">
-                Caboz
-              </a>
-              <div className="dropdown profile-dp d-block d-lg-none mob-wallet-details">
-                <a
-                  href="#"
-                  className="text-white dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                >
-                  <i className="fa-regular fa-circle-user f-icons profile-icon"></i>
-                </a>
-                <div className="dropdown-menu dropdown-menu-dark dropdown-menu-end text-left account-settings-mob mobile-nav-settings">
-                  <table width="100%">
-                    <thead>
-                      <tr>
-                        <td className="text-left">
-                          <h6 className="dropdown-header text-white">
-                            <b>Wallet</b>
-                          </h6>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="px-3 pb-1">
-                          <a className="walletid">Cc13hc....ui971uw</a>
-                        </td>
-                      </tr>
-                      <tr className="li-details">
-                        <td className="px-2">
-                          <table width="100%">
-                            <tbody>
-                              <tr>
-                                <td>Available SOL</td>
-                                <td className="text-right">
-                                  <img
-                                    src={solicon}
-                                    className="sol-icon"
-                                    alt="sol-icon"
-                                  />{" "}
-                                  74.3243
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>Locked SOL</td>
-                                <td className="text-right">
-                                  <img
-                                    src={solicon}
-                                    className="sol-icon"
-                                    alt="sol-icon"
-                                  />{" "}
-                                  46.8918
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>Active Trades</td>
-                                <td className="text-right">08</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="hr-div px-2" colSpan="2">
-                          <hr />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="hr-div px-2" colSpan="2">
-                          <a href="./profile.php">My Profile</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="hr-div px-2" colSpan="2">
-                          <a href="./order-history.php">My Order History</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="hr-div px-2" colSpan="2">
-                          <a href="./settings.php">Settings</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="hr-div px-2" colSpan="2">
-                          <hr />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="hr-div px-2" colSpan="2">
-                          <a href="./">Switch Account</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="hr-div px-2" colSpan="2">
-                          <a href="./">Logout</a>
-                        </td>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-              </div>
-
-              <button
-                className="navbar-toggler second-button shadow-none"
-                type="button"
-                id="navbarSideCollapse"
-                aria-label="Toggle navigation"
-              >
-                <div className="animated-icon2">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </button>
-
-              <div
-                className="navbar-collapse offcanvas-collapse"
-                id="navbarCollapse"
-              >
-                <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                  <li className="nav-item">
-                    <a
-                      href="./collection.php"
-                      className="nav-link px-4 text-white main-links"
-                    >
-                      Collections
-                    </a>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle px-4 text-white main-links"
-                      href="#"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Orders
-                    </a>
-                    <ul className="dropdown-menu dropdown-menu-dark ">
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="./create-order-step1.php"
-                        >
-                          Create New Order
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="./my-orders.php">
-                          My Orders
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      href="./market.php"
-                      className="nav-link px-4 text-white main-links"
-                    >
-                      Market
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      href="./activity.php"
-                      className="nav-link px-4 text-white main-links"
-                    >
-                      Activity
-                    </a>
-                  </li>
-                </ul>
-                <ul className="navbar-nav flex-row flex-wrap ms-md-auto ul-link-center d-none d-lg-block">
-                  <li className="nav-item dropdown mx-auto">
-                    <button
-                      type="button"
-                      className="mx-auto btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle shadow-none"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      data-bs-display="static"
-                    >
-                      <i className="fa-regular fa-circle-user f-icons"></i>
-                    </button>
-                    <ul
-                      className="dropdown-menu dropdown-menu-dark dropdown-menu-end account-settings"
-                      data-bs-popper="static"
-                    >
-                      <li>
-                        <h6 className="dropdown-header text-white">
-                          <b>Wallet</b>
-                        </h6>
-                      </li>
-                      <li className="px-3 pb-1">
-                        <a className="walletid">Cc13hc....ui971uw</a>
-                      </li>
-                      <li className="li-details">
-                        <a className="dropdown-item menuli">
-                          <table width="100%">
-                            <tbody>
-                              <tr>
-                                <td>Available SOL</td>
-                                <td className="text-right">
-                                  <img
-                                    src={solicon}
-                                    className="sol-icon"
-                                    alt="sol-icon"
-                                  />{" "}
-                                  74.3243
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>Locked SOL</td>
-                                <td className="text-right">
-                                  <img
-                                    src={solicon}
-                                    className="sol-icon"
-                                    alt="sol-icon"
-                                  />{" "}
-                                  46.8918
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>Active Trades</td>
-                                <td className="text-right">08</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </a>
-                      </li>
-                      <li className="hr-div">
-                        <hr />
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item menuli current"
-                          aria-current="true"
-                          href="./profile.php"
-                        >
-                          My Profile
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item menuli current"
-                          aria-current="true"
-                          href="./order-history.php"
-                        >
-                          My Order History
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item menuli current"
-                          aria-current="true"
-                          href="./settings.php"
-                        >
-                          Settings
-                        </a>
-                      </li>
-                      <li className="hr-div">
-                        <hr />
-                      </li>
-                      <li>
-                        <a className="dropdown-item menuli" href="./switch.php">
-                          Switch Account
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item menuli" href="./logout.php">
-                          Logout
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+          <Nav />
         </header>
         {/* <!-- Main --> */}
         <main className="container">
@@ -942,8 +667,7 @@ function App() {
                                 Froots
                               </span>
                               <br />
-                              Floor{" "}
-                              <img
+                              Floor <img
                                 src={solicon}
                                 className="sol-icon"
                               />{" "}
@@ -988,8 +712,7 @@ function App() {
                                 Aurory
                               </span>
                               <br />
-                              Floor{" "}
-                              <img
+                              Floor <img
                                 src={solicon}
                                 className="sol-icon"
                               />{" "}
@@ -1034,8 +757,7 @@ function App() {
                                 Vandal City
                               </span>
                               <br />
-                              Floor{" "}
-                              <img
+                              Floor <img
                                 src={solicon}
                                 className="sol-icon"
                               />{" "}
@@ -1109,18 +831,10 @@ function App() {
                           <span className="project-title-0">DeGods</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          324.75
+                          <img src={solicon} className="sol-icon" /> 324.75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          311
+                          <img src={solicon} className="sol-icon" /> 311
                         </td>
                         <td className="text-right valign-mid">237</td>
                       </tr>
@@ -1146,18 +860,10 @@ function App() {
                           </span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          11.45
+                          <img src={solicon} className="sol-icon" /> 11.45
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          9.1
+                          <img src={solicon} className="sol-icon" /> 9.1
                         </td>
                         <td className="text-right valign-mid">222</td>
                       </tr>
@@ -1181,18 +887,10 @@ function App() {
                           <span className="project-title-0">Inkwork Labs</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          16.25
+                          <img src={solicon} className="sol-icon" /> 16.25
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          14.5
+                          <img src={solicon} className="sol-icon" /> 14.5
                         </td>
                         <td className="text-right valign-mid">203</td>
                       </tr>
@@ -1216,18 +914,10 @@ function App() {
                           <span className="project-title-0">Froots</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          3.65
+                          <img src={solicon} className="sol-icon" /> 3.65
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          2.95
+                          <img src={solicon} className="sol-icon" /> 2.95
                         </td>
                         <td className="text-right valign-mid">199</td>
                       </tr>
@@ -1253,18 +943,10 @@ function App() {
                           </span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          75
+                          <img src={solicon} className="sol-icon" /> 75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          69
+                          <img src={solicon} className="sol-icon" /> 69
                         </td>
                         <td className="text-right valign-mid">184</td>
                       </tr>
@@ -1288,18 +970,10 @@ function App() {
                           <span className="project-title-0">Vandal City</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          324.75
+                          <img src={solicon} className="sol-icon" /> 324.75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          311
+                          <img src={solicon} className="sol-icon" /> 311
                         </td>
                         <td className="text-right valign-mid">237</td>
                       </tr>
@@ -1323,18 +997,10 @@ function App() {
                           <span className="project-title-0">Okay Bears</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          11.45
+                          <img src={solicon} className="sol-icon" /> 11.45
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          9.1
+                          <img src={solicon} className="sol-icon" /> 9.1
                         </td>
                         <td className="text-right valign-mid">222</td>
                       </tr>
@@ -1358,18 +1024,10 @@ function App() {
                           <span className="project-title-0">Aurory</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          16.25
+                          <img src={solicon} className="sol-icon" /> 16.25
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          14.5
+                          <img src={solicon} className="sol-icon" /> 14.5
                         </td>
                         <td className="text-right valign-mid">203</td>
                       </tr>
@@ -1393,18 +1051,10 @@ function App() {
                           <span className="project-title-0">Gothic Degesn</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          3.65
+                          <img src={solicon} className="sol-icon" /> 3.65
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          2.95
+                          <img src={solicon} className="sol-icon" /> 2.95
                         </td>
                         <td className="text-right valign-mid">199</td>
                       </tr>
@@ -1428,18 +1078,10 @@ function App() {
                           <span className="project-title-0">Cets On Creck</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          75
+                          <img src={solicon} className="sol-icon" /> 75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          69
+                          <img src={solicon} className="sol-icon" /> 69
                         </td>
                         <td className="text-right valign-mid">184</td>
                       </tr>
@@ -1488,18 +1130,10 @@ function App() {
                           <span className="project-title-0">Vandal City</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          324.75
+                          <img src={solicon} className="sol-icon" /> 324.75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          311
+                          <img src={solicon} className="sol-icon" /> 311
                         </td>
                         <td className="text-right valign-mid">237</td>
                       </tr>
@@ -1523,18 +1157,10 @@ function App() {
                           <span className="project-title-0">Okay Bears</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          11.45
+                          <img src={solicon} className="sol-icon" /> 11.45
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          9.1
+                          <img src={solicon} className="sol-icon" /> 9.1
                         </td>
                         <td className="text-right valign-mid">222</td>
                       </tr>
@@ -1558,18 +1184,10 @@ function App() {
                           <span className="project-title-0">Aurory</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          16.25
+                          <img src={solicon} className="sol-icon" /> 16.25
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          14.5
+                          <img src={solicon} className="sol-icon" /> 14.5
                         </td>
                         <td className="text-right valign-mid">203</td>
                       </tr>
@@ -1593,18 +1211,10 @@ function App() {
                           <span className="project-title-0">Gothic Degesn</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          3.65
+                          <img src={solicon} className="sol-icon" /> 3.65
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          2.95
+                          <img src={solicon} className="sol-icon" /> 2.95
                         </td>
                         <td className="text-right valign-mid">199</td>
                       </tr>
@@ -1628,18 +1238,10 @@ function App() {
                           <span className="project-title-0">Cets On Creck</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          75
+                          <img src={solicon} className="sol-icon" /> 75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          69
+                          <img src={solicon} className="sol-icon" /> 69
                         </td>
                         <td className="text-right valign-mid">184</td>
                       </tr>
@@ -1699,18 +1301,10 @@ function App() {
                           <span className="project-title-0">DeGods</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          324.75
+                          <img src={solicon} className="sol-icon" /> 324.75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          311
+                          <img src={solicon} className="sol-icon" /> 311
                         </td>
                         <td className="text-right valign-mid">237</td>
                       </tr>
@@ -1736,18 +1330,10 @@ function App() {
                           </span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          11.45
+                          <img src={solicon} className="sol-icon" /> 11.45
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          9.1
+                          <img src={solicon} className="sol-icon" /> 9.1
                         </td>
                         <td className="text-right valign-mid">222</td>
                       </tr>
@@ -1771,18 +1357,10 @@ function App() {
                           <span className="project-title-0">Inkwork Labs</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          16.25
+                          <img src={solicon} className="sol-icon" /> 16.25
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          14.5
+                          <img src={solicon} className="sol-icon" /> 14.5
                         </td>
                         <td className="text-right valign-mid">203</td>
                       </tr>
@@ -1806,18 +1384,10 @@ function App() {
                           <span className="project-title-0">Froots</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          3.65
+                          <img src={solicon} className="sol-icon" /> 3.65
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          2.95
+                          <img src={solicon} className="sol-icon" /> 2.95
                         </td>
                         <td className="text-right valign-mid">199</td>
                       </tr>
@@ -1843,18 +1413,10 @@ function App() {
                           </span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          75
+                          <img src={solicon} className="sol-icon" /> 75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          69
+                          <img src={solicon} className="sol-icon" /> 69
                         </td>
                         <td className="text-right valign-mid">184</td>
                       </tr>
@@ -1878,18 +1440,10 @@ function App() {
                           <span className="project-title-0">Vandal City</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          324.75
+                          <img src={solicon} className="sol-icon" /> 324.75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          311
+                          <img src={solicon} className="sol-icon" /> 311
                         </td>
                         <td className="text-right valign-mid">237</td>
                       </tr>
@@ -1913,18 +1467,10 @@ function App() {
                           <span className="project-title-0">Okay Bears</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          11.45
+                          <img src={solicon} className="sol-icon" /> 11.45
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          9.1
+                          <img src={solicon} className="sol-icon" /> 9.1
                         </td>
                         <td className="text-right valign-mid">222</td>
                       </tr>
@@ -1948,18 +1494,10 @@ function App() {
                           <span className="project-title-0">Aurory</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          16.25
+                          <img src={solicon} className="sol-icon" /> 16.25
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          14.5
+                          <img src={solicon} className="sol-icon" /> 14.5
                         </td>
                         <td className="text-right valign-mid">203</td>
                       </tr>
@@ -1983,18 +1521,10 @@ function App() {
                           <span className="project-title-0">Gothic Degesn</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          3.65
+                          <img src={solicon} className="sol-icon" /> 3.65
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          2.95
+                          <img src={solicon} className="sol-icon" /> 2.95
                         </td>
                         <td className="text-right valign-mid">199</td>
                       </tr>
@@ -2018,18 +1548,10 @@ function App() {
                           <span className="project-title-0">Cets On Creck</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          75
+                          <img src={solicon} className="sol-icon" /> 75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          69
+                          <img src={solicon} className="sol-icon" /> 69
                         </td>
                         <td className="text-right valign-mid">184</td>
                       </tr>
@@ -2078,18 +1600,10 @@ function App() {
                           <span className="project-title-0">Vandal City</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          324.75
+                          <img src={solicon} className="sol-icon" /> 324.75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          311
+                          <img src={solicon} className="sol-icon" /> 311
                         </td>
                         <td className="text-right valign-mid">237</td>
                       </tr>
@@ -2113,18 +1627,10 @@ function App() {
                           <span className="project-title-0">Okay Bears</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          11.45
+                          <img src={solicon} className="sol-icon" /> 11.45
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          9.1
+                          <img src={solicon} className="sol-icon" /> 9.1
                         </td>
                         <td className="text-right valign-mid">222</td>
                       </tr>
@@ -2148,18 +1654,10 @@ function App() {
                           <span className="project-title-0">Aurory</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          16.25
+                          <img src={solicon} className="sol-icon" /> 16.25
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          14.5
+                          <img src={solicon} className="sol-icon" /> 14.5
                         </td>
                         <td className="text-right valign-mid">203</td>
                       </tr>
@@ -2183,18 +1681,10 @@ function App() {
                           <span className="project-title-0">Gothic Degesn</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          3.65
+                          <img src={solicon} className="sol-icon" /> 3.65
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          2.95
+                          <img src={solicon} className="sol-icon" /> 2.95
                         </td>
                         <td className="text-right valign-mid">199</td>
                       </tr>
@@ -2218,18 +1708,10 @@ function App() {
                           <span className="project-title-0">Cets On Creck</span>
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          75
+                          <img src={solicon} className="sol-icon" /> 75
                         </td>
                         <td className="text-right valign-mid">
-                          <img
-                            src={solicon}
-                            className="sol-icon"
-                          />{" "}
-                          69
+                          <img src={solicon} className="sol-icon" /> 69
                         </td>
                         <td className="text-right valign-mid">184</td>
                       </tr>

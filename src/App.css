@@ -1,0 +1,24 @@
+#move-left{
+    animation: movein .2s linear forwards;
+}
+
+@keyframes movein {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+#tryFixCollapse{
+    @apply visible right-[0px];
+    left: auto;
+    animation: movein .2s linear forwards;
+}
+
+@media screen and (min-width: 768px) {
+    #tryFixCollapse{
+        display: none!important;
+    }
+}
