@@ -1,24 +1,2355 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./assets/css/bootstrap.min.css"
+import "./assets/css/style.css"
+import "./assets/css/aos.css"
+import "./assets/css/offcanvas.css"
+import "./assets/fonts/fontawesome-free-6.1.1-web/css/all.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Caboz Tool by Inkwork Labs" />
+      <meta name="author" content="Caboz" />
+      <title>Caboz Tool by Inkwork Labs</title>
+      {/* Styles  */}
+      {/* <!-- Fonts --> */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
+      />
+      {/* <!-- Favicon and Touch Icons --> */}
+      <link rel="shortcut icon" href="assets/images/favicon.png" />
+      <link
+        rel="apple-touch-icon-precomposed"
+        href="assets/images/favicon.png"
+      />
+
+      <div className="App">
+        {/* <!-- Loading --> */}
+        <div id="overlay" style={{display:"none"}}>
+          <div className="spinner"></div>
+          <br />
+          Loading...
+        </div>
+        {/* <!-- Header --> */}
+        <header>
+          {/* <!-- Main Navigation --> */}
+          <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div className="container container-relative">
+              <a className="navbar-brand" href="./">
+                Caboz
+              </a>
+              <div className="dropdown profile-dp d-block d-lg-none mob-wallet-details">
+                <a
+                  href="#"
+                  className="text-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                >
+                  <i className="fa-regular fa-circle-user f-icons profile-icon"></i>
+                </a>
+                <div className="dropdown-menu dropdown-menu-dark dropdown-menu-end text-left account-settings-mob mobile-nav-settings">
+                  <table width="100%">
+                    <thead>
+                      <tr>
+                        <td className="text-left">
+                          <h6 className="dropdown-header text-white">
+                            <b>Wallet</b>
+                          </h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="px-3 pb-1">
+                          <a className="walletid">Cc13hc....ui971uw</a>
+                        </td>
+                      </tr>
+                      <tr className="li-details">
+                        <td className="px-2">
+                          <table width="100%">
+                            <tbody>
+                            <tr>
+                              <td>Available SOL</td>
+                              <td className="text-right">
+                                <img
+                                  src="./assets/images/sol-icon.png"
+                                  className="sol-icon"
+                                />{" "}
+                                74.3243
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Locked SOL</td>
+                              <td className="text-right">
+                                <img
+                                  src="./assets/images/sol-icon.png"
+                                  className="sol-icon"
+                                />{" "}
+                                46.8918
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Active Trades</td>
+                              <td className="text-right">08</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="hr-div px-2" colSpan="2">
+                          <hr />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="hr-div px-2" colSpan="2">
+                          <a href="./profile.php">My Profile</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="hr-div px-2" colSpan="2">
+                          <a href="./order-history.php">My Order History</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="hr-div px-2" colSpan="2">
+                          <a href="./settings.php">Settings</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="hr-div px-2" colSpan="2">
+                          <hr />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="hr-div px-2" colSpan="2">
+                          <a href="./">Switch Account</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="hr-div px-2" colSpan="2">
+                          <a href="./">Logout</a>
+                        </td>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+
+              <button
+                className="navbar-toggler second-button shadow-none"
+                type="button"
+                id="navbarSideCollapse"
+                aria-label="Toggle navigation"
+              >
+                <div className="animated-icon2">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+
+              <div
+                className="navbar-collapse offcanvas-collapse"
+                id="navbarCollapse"
+              >
+                <ul className="navbar-nav me-auto mb-2 mb-md-0">
+                  <li className="nav-item">
+                    <a
+                      href="./collection.php"
+                      className="nav-link px-4 text-white main-links"
+                    >
+                      Collections
+                    </a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle px-4 text-white main-links"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Orders
+                    </a>
+                    <ul className="dropdown-menu dropdown-menu-dark ">
+                      <li>
+                        <a
+                          className="dropdown-item"
+                          href="./create-order-step1.php"
+                        >
+                          Create New Order
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="./my-orders.php">
+                          My Orders
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      href="./market.php"
+                      className="nav-link px-4 text-white main-links"
+                    >
+                      Market
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      href="./activity.php"
+                      className="nav-link px-4 text-white main-links"
+                    >
+                      Activity
+                    </a>
+                  </li>
+                </ul>
+                <ul className="navbar-nav flex-row flex-wrap ms-md-auto ul-link-center d-none d-lg-block">
+                  <li className="nav-item dropdown mx-auto">
+                    <button
+                      type="button"
+                      className="mx-auto btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle shadow-none"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      data-bs-display="static"
+                    >
+                      <i className="fa-regular fa-circle-user f-icons"></i>
+                    </button>
+                    <ul
+                      className="dropdown-menu dropdown-menu-dark dropdown-menu-end account-settings"
+                      data-bs-popper="static"
+                    >
+                      <li>
+                        <h6 className="dropdown-header text-white">
+                          <b>Wallet</b>
+                        </h6>
+                      </li>
+                      <li className="px-3 pb-1">
+                        <a className="walletid">Cc13hc....ui971uw</a>
+                      </li>
+                      <li className="li-details">
+                        <a className="dropdown-item menuli">
+                          <table width="100%">
+                            <tbody>
+                            <tr>
+                              <td>Available SOL</td>
+                              <td className="text-right">
+                                <img
+                                  src="./assets/images/sol-icon.png"
+                                  className="sol-icon"
+                                />{" "}
+                                74.3243
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Locked SOL</td>
+                              <td className="text-right">
+                                <img
+                                  src="./assets/images/sol-icon.png"
+                                  className="sol-icon"
+                                />{" "}
+                                46.8918
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Active Trades</td>
+                              <td className="text-right">08</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </a>
+                      </li>
+                      <li className="hr-div">
+                        <hr />
+                      </li>
+                      <li>
+                        <a
+                          className="dropdown-item menuli current"
+                          aria-current="true"
+                          href="./profile.php"
+                        >
+                          My Profile
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className="dropdown-item menuli current"
+                          aria-current="true"
+                          href="./order-history.php"
+                        >
+                          My Order History
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className="dropdown-item menuli current"
+                          aria-current="true"
+                          href="./settings.php"
+                        >
+                          Settings
+                        </a>
+                      </li>
+                      <li className="hr-div">
+                        <hr />
+                      </li>
+                      <li>
+                        <a className="dropdown-item menuli" href="./switch.php">
+                          Switch Account
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item menuli" href="./logout.php">
+                          Logout
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+        {/* <!-- Main --> */}
+        <main className="container">
+          {/* <!-- Intoduction --> */}
+          <div className="caboz text-center">
+            <h3
+              className="display-3 fw-bold inlineblock aos-init"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Place multiple limit orders
+              <br />
+              powered by buyer's market and CP
+            </h3>
+            <br />
+            <a
+              href="./market.php"
+              className="btn-index btn btn-dark btn-lg rounded-3 aos-init shadow-none mb-4 mx-3 inlineblock"
+              type="button"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
+              Market&nbsp;&nbsp;<i className="fa-solid fa-table-list"></i>
+            </a>
+            <a
+              href="./create-order.php"
+              className="btn-index btn btn-dark btn-lg rounded-3 aos-init shadow-none mb-4 mx-3 inlineblock"
+              type="button"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
+              Create Order&nbsp;&nbsp;<i className="fa-solid fa-plus"></i>
+            </a>
+          </div>
+          {/* <!-- Featured Project --> */}
+          <div
+            className="project-feature aos-init mb-4"
+            data-aos="zoom-in"
+            data-aos-duration="3000"
+          >
+            <div className="project-feature-inner">
+              <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 gx-0">
+                <div className="col col-xs-1 col-md-7 col-lg-7 px-4 py-4">
+                  <table className="table table-borderless white-text my-0">
+                    <tbody>
+                    <tr>
+                      <td width="40%">
+                        <a href="./project.php?proj=Inkwork Labs">
+                          <img
+                            src="./assets/images/user.png"
+                            alt=""
+                            width="150"
+                            className="img-fluid rounded-circle shadow-sm mx-auto d-block"
+                          />
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="./project.php?proj=Inkwork Labs"
+                          className="project-title-link"
+                        >
+                          <h4>Inkwork Labs</h4>
+                        </a>
+                        <p>
+                          Buy a Inkwork Labs NFT to get discount on trading fees
+                          and enjoy more privileges!
+                        </p>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="col col-xs-1 col-md-5 col-lg-5 left-details px-4 py-4">
+                  <table className="table table-borderless white-text">
+                    <tbody>
+                    <tr>
+                      <td>
+                        <h4>Buy On</h4>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center">
+                        <a
+                          className="btn btn-dark btn-md rounded-3 shadow-none mx-2 mt-3"
+                          type="button"
+                        >
+                          Magic Eden{" "}
+                          <img
+                            src="./assets/images/magiceden.png"
+                            alt=""
+                            style={{height: "15px"}}
+                            className="mx-2"
+                          />
+                        </a>
+                        <a
+                          className="btn btn-dark btn-md rounded-3 shadow-none mx-2 mt-3"
+                          type="button"
+                        >
+                          OpenSea{" "}
+                          <img
+                            src="./assets/images/opensea.png"
+                            alt=""
+                            style={{height: "17px"}}
+                            className="mx-2"
+                          />
+                        </a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- Stats --> */}
+          <div
+            className="row row-cols-xs-2 row-cols-sm-2 row-cols-md-5 row-cols-lg-5 row-colsxxl-5 mt-4 aos-init"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <div className="col mb-4">
+              <div className="stats px-1 py-1">
+                <table className="table table-borderless white-text my-0">
+                  <tbody>
+                  <tr>
+                    <td>
+                      <i className="fa-solid fa-arrow-trend-down text-red"></i>
+                    </td>
+                    <td className="text-right">
+                      EST. MCAP
+                      <br />
+                      <span className="num">805.6M</span>
+                      <br />
+                      <small className="text-red">-1.67%</small>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="stats px-1 py-1">
+                <table className="table table-borderless white-text my-0">
+                  <tr>
+                    <td>
+                      <i className="fa-solid fa-arrow-trend-up text-green"></i>
+                    </td>
+                    <td className="text-right">
+                      SOL Price
+                      <br />
+                      <span className="num">$40.51</span>
+                      <br />
+                      <small className="text-green">+1.67%</small>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="stats px-1 py-1">
+                <table className="table table-borderless white-text my-0">
+                  <tr>
+                    <td>
+                      <i className="fa-solid fa-arrow-right-long"></i>
+                    </td>
+                    <td className="text-right">
+                      TPS
+                      <br />
+                      <span className="num">2,472</span>
+                      <br />
+                      <br />
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="stats px-1 py-1">
+                <table className="table table-borderless white-text my-0">
+                  <tr>
+                    <td>
+                      <i className="fa-solid fa-arrow-trend-down text-red"></i>
+                    </td>
+                    <td className="text-right">
+                      24H Volume
+                      <br />
+                      <span className="num">2.123M</span>
+                      <br />
+                      <small className="text-red">-3.32%</small>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="stats px-1 py-1">
+                <table className="table table-borderless white-text my-0">
+                  <tr>
+                    <td>
+                      <i className="fa-solid fa-arrow-trend-up text-green"></i>
+                    </td>
+                    <td className="text-right">
+                      7D Volume
+                      <br />
+                      <span className="num">16.52M</span>
+                      <br />
+                      <small className="text-green">+4.67%</small>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          {/* <!-- Top Projects --> */}
+          <div
+            className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-colsxxl-3 aos-init"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            {/* <!-- Popular Collections --> */}
+            <div className="col col-xs-1">
+              <div className="top-projects px-1 py-1 mb-4">
+                <div className="table-head px-1 py-1">
+                  Popular Collections (24H)
+                  <a className="more float-right">
+                    <small>
+                      More <i className="fa-solid fa-play"></i>
+                    </small>
+                  </a>
+                </div>
+                <table className="table table-borderless white-text my-0">
+                  <tbody>
+                    <tr>
+                      <td width="20px" className="number-list">
+                        1
+                      </td>
+                      <td width="70px">
+                        <a
+                          href="./project.php?proj=DeGods"
+                          className="project-link"
+                        >
+                          <img
+                            src="./assets/images/projects/degods.png"
+                            alt=""
+                            className="img-fluid mx-auto d-block proj-img"
+                          />
+                        </a>
+                      </td>
+                      <td className="proj-stats">
+                        <a
+                          href="./project.php?proj=DeGods"
+                          className="project-link"
+                        >
+                          <div className="row row-cols-2 text-gray">
+                            <div className="col-7 text-small">
+                              <span className="white-text project-title">
+                                DeGods
+                              </span>
+                              <br />
+                              Floor{" "}
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              324.75
+                            </div>
+                            <div className="col-5 text-right text-small">
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              2264.52
+                              <br />
+                              <span className="text-green">+1373%</span>
+                            </div>
+                          </div>
+                          <div className="row row-cols-1">
+                            <div className="col-12 ">
+                              <hr />
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="20px" className="number-list">
+                        2
+                      </td>
+                      <td width="70px">
+                        <a
+                          href="./project.php?proj=Inkwork Labs"
+                          className="project-link"
+                        >
+                          <img
+                            src="./assets/images/projects/inkworklabs.png"
+                            alt=""
+                            className="img-fluid mx-auto d-block proj-img"
+                          />
+                        </a>
+                      </td>
+                      <td className="proj-stats">
+                        <a
+                          href="./project.php?proj=Inkwork Labs"
+                          className="project-link"
+                        >
+                          <div className="row row-cols-2 text-gray">
+                            <div className="col-7 text-small">
+                              <span className="white-text project-title">
+                                Inkwork Labs
+                              </span>
+                              <br />
+                              Floor{" "}
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              16.25
+                            </div>
+                            <div className="col-5 text-right text-small">
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              1173.00
+                              <br />
+                              <span className="text-green">+163%</span>
+                            </div>
+                          </div>
+                          <div className="row row-cols-1">
+                            <div className="col-12 ">
+                              <hr />
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="20px" className="number-list">
+                        3
+                      </td>
+                      <td width="70px">
+                        <a
+                          href="./project.php?proj=Blocksmith Labs"
+                          className="project-link"
+                        >
+                          <img
+                            src="./assets/images/projects/blocksmithlabs.png"
+                            alt=""
+                            className="img-fluid mx-auto d-block proj-img"
+                          />
+                        </a>
+                      </td>
+                      <td className="proj-stats">
+                        <a
+                          href="./project.php?proj=Blocksmith Labs"
+                          className="project-link"
+                        >
+                          <div className="row row-cols-2 text-gray">
+                            <div className="col-7 text-small">
+                              <span className="white-text project-title">
+                                Blocksmith Labs
+                              </span>
+                              <br />
+                              Floor{" "}
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              75
+                            </div>
+                            <div className="col-5 text-right text-small">
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              913.00
+                              <br />
+                              <span className="text-red">-23.45%</span>
+                            </div>
+                          </div>
+                          <div className="row row-cols-1">
+                            <div className="col-12 ">
+                              <hr />
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            {/* <!-- Ceiling Price Moverss --> */}
+            <div className="col col-xs-1">
+              <div className="top-projects px-1 py-1 mb-4">
+                <div className="table-head px-1 py-1">
+                  Ceiling Price Movers (24H)
+                  <a className="more float-right">
+                    <small>
+                      More <i className="fa-solid fa-play"></i>
+                    </small>
+                  </a>
+                </div>
+                <table className="table table-borderless white-text my-0">
+                  <tbody>
+                    <tr>
+                      <td width="20px" className="number-list">
+                        1
+                      </td>
+                      <td width="70px">
+                        <a
+                          href="./project.php?proj=Cets On Creck"
+                          className="project-link"
+                        >
+                          <img
+                            src="./assets/images/projects/cetsoncreck.png"
+                            alt=""
+                            className="img-fluid mx-auto d-block proj-img"
+                          />
+                        </a>
+                      </td>
+                      <td className="proj-stats">
+                        <a
+                          href="./project.php?proj=Cets On Creck"
+                          className="project-link"
+                        >
+                          <div className="row row-cols-2 text-gray">
+                            <div className="col-7 text-small">
+                              <span className="white-text project-title">
+                                Cets On Creck
+                              </span>
+                              <br />
+                              Floor{" "}
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              36
+                            </div>
+                            <div className="col-5 text-right text-small">
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              34.5
+                              <br />
+                              <span className="text-green">+88.91%</span>
+                            </div>
+                          </div>
+                          <div className="row row-cols-1">
+                            <div className="col-12 ">
+                              <hr />
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="20px" className="number-list">
+                        2
+                      </td>
+                      <td width="70px">
+                        <a
+                          href="./project.php?proj=Okay Bears"
+                          className="project-link"
+                        >
+                          <img
+                            src="./assets/images/projects/okaybears.png"
+                            alt=""
+                            className="img-fluid mx-auto d-block proj-img"
+                          />
+                        </a>
+                      </td>
+                      <td className="proj-stats">
+                        <a
+                          href="./project.php?proj=Okay Bears"
+                          className="project-link"
+                        >
+                          <div className="row row-cols-2 text-gray">
+                            <div className="col-7 text-small">
+                              <span className="white-text project-title">
+                                Okay Bears
+                              </span>
+                              <br />
+                              Floor{" "}
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              69.75
+                            </div>
+                            <div className="col-5 text-right text-small">
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              64.5
+                              <br />
+                              <span className="text-green">+69.23%</span>
+                            </div>
+                          </div>
+                          <div className="row row-cols-1">
+                            <div className="col-12 ">
+                              <hr />
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="20px" className="number-list">
+                        3
+                      </td>
+                      <td width="70px">
+                        <a
+                          href="./project.php?proj=Trippin Ape Tribe"
+                          className="project-link"
+                        >
+                          <img
+                            src="./assets/images/projects/trippinapetribe.png"
+                            alt=""
+                            className="img-fluid mx-auto d-block proj-img"
+                          />
+                        </a>
+                      </td>
+                      <td className="proj-stats">
+                        <a
+                          href="./project.php?proj=Trippin Ape Tribe"
+                          className="project-link"
+                        >
+                          <div className="row row-cols-2 text-gray">
+                            <div className="col-7 text-small">
+                              <span className="white-text project-title">
+                                Trippin Ape Tribe
+                              </span>
+                              <br />
+                              Floor{" "}
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              11.45
+                            </div>
+                            <div className="col-5 text-right text-small">
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              9.1
+                              <br />
+                              <span className="text-green">+34.53%</span>
+                            </div>
+                          </div>
+                          <div className="row row-cols-1">
+                            <div className="col-12 ">
+                              <hr />
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            {/* <!-- Floor Price Moverss --> */}
+            <div className="col col-xs-1">
+              <div className="top-projects px-1 py-1 mb-4">
+                <div className="table-head px-1 py-1">
+                  Floor Price Movers (24H)
+                  <a className="more float-right">
+                    <small>
+                      More <i className="fa-solid fa-play"></i>
+                    </small>
+                  </a>
+                </div>
+                <table className="table table-borderless white-text my-0">
+                  <tbody>
+                    <tr>
+                      <td width="20px" className="number-list">
+                        1
+                      </td>
+                      <td width="70px">
+                        <a
+                          href="./project.php?proj=Froots"
+                          className="project-link"
+                        >
+                          <img
+                            src="./assets/images/projects/froots.png"
+                            alt=""
+                            className="img-fluid mx-auto d-block proj-img"
+                          />
+                        </a>
+                      </td>
+                      <td className="proj-stats">
+                        <a
+                          href="./project.php?proj=Froots"
+                          className="project-link"
+                        >
+                          <div className="row row-cols-2 text-gray">
+                            <div className="col-7 text-small">
+                              <span className="white-text project-title">
+                                Froots
+                              </span>
+                              <br />
+                              Floor{" "}
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              3.65
+                            </div>
+                            <div className="col-5 text-right text-small">
+                              <span className="text-green">+44%</span>
+                            </div>
+                          </div>
+                          <div className="row row-cols-1">
+                            <div className="col-12 ">
+                              <hr />
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="20px" className="number-list">
+                        2
+                      </td>
+                      <td width="70px">
+                        <a
+                          href="./project.php?proj=Aurory"
+                          className="project-link"
+                        >
+                          <img
+                            src="./assets/images/projects/aurory.png"
+                            alt=""
+                            className="img-fluid mx-auto d-block proj-img"
+                          />
+                        </a>
+                      </td>
+                      <td className="proj-stats">
+                        <a
+                          href="./project.php?proj=Aurory"
+                          className="project-link"
+                        >
+                          <div className="row row-cols-2 text-gray">
+                            <div className="col-7 text-small">
+                              <span className="white-text project-title">
+                                Aurory
+                              </span>
+                              <br />
+                              Floor{" "}
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              16.25
+                            </div>
+                            <div className="col-5 text-right text-small">
+                              <span className="text-green">+38%</span>
+                            </div>
+                          </div>
+                          <div className="row row-cols-1">
+                            <div className="col-12 ">
+                              <hr />
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="20px" className="number-list">
+                        3
+                      </td>
+                      <td width="70px">
+                        <a
+                          href="./project.php?proj=Vandal City"
+                          className="project-link"
+                        >
+                          <img
+                            src="./assets/images/projects/vandalcity.png"
+                            alt=""
+                            className="img-fluid mx-auto d-block proj-img"
+                          />
+                        </a>
+                      </td>
+                      <td className="proj-stats">
+                        <a
+                          href="./project.php?proj=Vandal City"
+                          className="project-link"
+                        >
+                          <div className="row row-cols-2 text-gray">
+                            <div className="col-7 text-small">
+                              <span className="white-text project-title">
+                                Vandal City
+                              </span>
+                              <br />
+                              Floor{" "}
+                              <img
+                                src="./assets/images/sol-icon.png"
+                                className="sol-icon"
+                              />{" "}
+                              7.5
+                            </div>
+                            <div className="col-5 text-right text-small">
+                              <span className="text-green">+21%</span>
+                            </div>
+                          </div>
+                          <div className="row row-cols-1">
+                            <div className="col-12 ">
+                              <hr />
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          {/* <!-- Collections -->/ */}
+          <div
+            className="row collections row-cols-1 mb-4 aos-init gx-0 pb-4"
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+          >
+            {/* <!-- Active Collections --> */}
+            <div className="px-2 py-4">
+              <h3 className="float-left mx-2">Active Collections</h3>
+              <a className="btn btn-dark btn-md rounded-3 shadow-none inlineblock view-all float-right">
+                View All <i className="mx-2 fa-solid fa-table-list"></i>
+              </a>
+            </div>
+            <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xxl-2 px-1">
+              <div className="col col-xs-1">
+                <div className="table-responsive text-nowrap">
+                  <table className="table table-sm table-borderless white-text my-0 text-small table-fixed">
+                    <thead>
+                      <tr>
+                        <th width="25px"></th>
+                        <th className="valign-mid" colSpan="2" width="150px">
+                          Collection Name
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Floor Price
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Ceiling Price
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Active Trades
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        className="goto-collection"
+                        // //onClick="window.location='./project.php?proj=DeGods';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          1
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/degods.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">DeGods</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          324.75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          311
+                        </td>
+                        <td className="text-right valign-mid">237</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        // //onClick="window.location='./project.php?proj=Trippin Ape Tribe';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          2
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/trippinapetribe.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">
+                            Trippin Ape Tribe
+                          </span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          11.45
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          9.1
+                        </td>
+                        <td className="text-right valign-mid">222</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        // //onClick="window.location='./project.php?proj=Inkwork Labs';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          3
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/inkworklabs.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Inkwork Labs</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          16.25
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          14.5
+                        </td>
+                        <td className="text-right valign-mid">203</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        // //onClick="window.location='./project.php?proj=Froots';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          4
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/froots.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Froots</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          3.65
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          2.95
+                        </td>
+                        <td className="text-right valign-mid">199</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        // //onClick="window.location='./project.php?proj=Blocksmith Labs';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          5
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/blocksmithlabs.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">
+                            Blocksmith Labs
+                          </span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          69
+                        </td>
+                        <td className="text-right valign-mid">184</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Vandal City';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          6
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/vandalcity.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Vandal City</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          324.75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          311
+                        </td>
+                        <td className="text-right valign-mid">237</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Okay Bears';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          7
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/okaybears.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Okay Bears</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          11.45
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          9.1
+                        </td>
+                        <td className="text-right valign-mid">222</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Aurory';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          8
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/aurory.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Aurory</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          16.25
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          14.5
+                        </td>
+                        <td className="text-right valign-mid">203</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Gothic Degens';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          9
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/gothicdegens.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Gothic Degesn</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          3.65
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          2.95
+                        </td>
+                        <td className="text-right valign-mid">199</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Cets On Creck';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          10
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/cetsoncreck.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Cets On Creck</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          69
+                        </td>
+                        <td className="text-right valign-mid">184</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div className="col col-xs-1 mb-2 d-none d-lg-block">
+                <div className="table-responsive text-nowrap">
+                  <table className="table table-sm table-borderless white-text my-0 text-small table-fixed">
+                    <thead className="thead-tble">
+                      <tr className="no-border">
+                        <th width="25px"></th>
+                        <th className="valign-mid" colSpan="2" width="150px">
+                          Collection Name
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Floor Price
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Ceiling Price
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Active Trades
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Vandal City';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          6
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/vandalcity.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Vandal City</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          324.75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          311
+                        </td>
+                        <td className="text-right valign-mid">237</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Okay Bears';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          7
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/okaybears.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Okay Bears</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          11.45
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          9.1
+                        </td>
+                        <td className="text-right valign-mid">222</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Aurory';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          8
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/aurory.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Aurory</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          16.25
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          14.5
+                        </td>
+                        <td className="text-right valign-mid">203</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Gothic Degens';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          9
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/gothicdegens.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Gothic Degesn</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          3.65
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          2.95
+                        </td>
+                        <td className="text-right valign-mid">199</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Cets On Creck';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          10
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/cetsoncreck.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Cets On Creck</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          69
+                        </td>
+                        <td className="text-right valign-mid">184</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="row collections row-cols-1 mb-4 aos-init gx-0 pb-4 mb-5"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            {/* <!-- Active Collections --> */}
+            <div className="px-2 py-4">
+              <h3 className="float-left mx-2">Trending Collections</h3>
+              <a className="btn btn-dark btn-md rounded-3 shadow-none inlineblock view-all float-right">
+                View All <i className="mx-2 fa-solid fa-table-list"></i>
+              </a>
+            </div>
+            <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xxl-2 px-1">
+              <div className="col col-xs-1">
+                <div className="table-responsive text-nowrap">
+                  <table className="table table-sm table-borderless white-text my-0 text-small table-fixed">
+                    <thead>
+                      <tr>
+                        <th width="25px"></th>
+                        <th className="valign-mid" colSpan="2" width="150px">
+                          Collection Name
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Floor Price
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Ceiling Price
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Trades (24H)
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=DeGods';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          1
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/degods.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">DeGods</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          324.75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          311
+                        </td>
+                        <td className="text-right valign-mid">237</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Trippin Ape Tribe';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          2
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/trippinapetribe.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">
+                            Trippin Ape Tribe
+                          </span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          11.45
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          9.1
+                        </td>
+                        <td className="text-right valign-mid">222</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Inkwork Labs';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          3
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/inkworklabs.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Inkwork Labs</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          16.25
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          14.5
+                        </td>
+                        <td className="text-right valign-mid">203</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Froots';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          4
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/froots.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Froots</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          3.65
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          2.95
+                        </td>
+                        <td className="text-right valign-mid">199</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Blocksmith Labs';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          5
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/blocksmithlabs.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">
+                            Blocksmith Labs
+                          </span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          69
+                        </td>
+                        <td className="text-right valign-mid">184</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Vandal City';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          6
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/vandalcity.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Vandal City</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          324.75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          311
+                        </td>
+                        <td className="text-right valign-mid">237</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Okay Bears';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          7
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/okaybears.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Okay Bears</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          11.45
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          9.1
+                        </td>
+                        <td className="text-right valign-mid">222</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Aurory';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          8
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/aurory.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Aurory</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          16.25
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          14.5
+                        </td>
+                        <td className="text-right valign-mid">203</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Gothic Degens';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          9
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/gothicdegens.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Gothic Degesn</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          3.65
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          2.95
+                        </td>
+                        <td className="text-right valign-mid">199</td>
+                      </tr>
+                      <tr
+                        className="goto-collection d-lg-none"
+                        //onClick="window.location='./project.php?proj=Cets On Creck';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          10
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/cetsoncreck.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Cets On Creck</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          69
+                        </td>
+                        <td className="text-right valign-mid">184</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div className="col col-xs-1 mb-2 d-none d-lg-block">
+                <div className="table-responsive text-nowrap">
+                  <table className="table table-sm table-borderless white-text my-0 text-small table-fixed">
+                    <thead className="thead-tble">
+                      <tr className="no-border">
+                        <th width="25px"></th>
+                        <th className="valign-mid" colSpan="2" width="150px">
+                          Collection Name
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Floor Price
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Ceiling Price
+                        </th>
+                        <th className="valign-mid text-right" width="80px">
+                          Trades (24H)
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Vandal City';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          6
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/vandalcity.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Vandal City</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          324.75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          311
+                        </td>
+                        <td className="text-right valign-mid">237</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Okay Bears';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          7
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/okaybears.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Okay Bears</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          11.45
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          9.1
+                        </td>
+                        <td className="text-right valign-mid">222</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Aurory';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          8
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/aurory.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Aurory</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          16.25
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          14.5
+                        </td>
+                        <td className="text-right valign-mid">203</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Gothic Degens';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          9
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/gothicdegens.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Gothic Degesn</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          3.65
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          2.95
+                        </td>
+                        <td className="text-right valign-mid">199</td>
+                      </tr>
+                      <tr
+                        className="goto-collection"
+                        //onClick="window.location='./project.php?proj=Cets On Creck';"
+                      >
+                        <td width="20px" className="number-list valign-mid">
+                          10
+                        </td>
+                        <td className="valign-mid">
+                          <a href="#" className="project-link">
+                            <img
+                              src="./assets/images/projects/cetsoncreck.png"
+                              alt=""
+                              className="img-fluid mx-auto d-block proj-img"
+                            />
+                          </a>
+                        </td>
+                        <td className="valign-mid">
+                          <span className="project-title-0">Cets On Creck</span>
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          75
+                        </td>
+                        <td className="text-right valign-mid">
+                          <img
+                            src="./assets/images/sol-icon.png"
+                            className="sol-icon"
+                          />{" "}
+                          69
+                        </td>
+                        <td className="text-right valign-mid">184</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        {/* <!-- Footer --> */}
+        <footer>
+          <div className="container">
+            <div className="footer gx-0">
+              <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-4 row-cols-lg-4 row-cols-xxl-4 p-5 pb-0">
+                <div className="col col-xs-12 col-sm-12 col-sm-5 col-md-5 col-lg-5 col-xxl-5 mb-4">
+                  <h1>Caboz</h1>
+                  <p>
+                    With CABOZ users can place
+                    <br />
+                    limit orders on NFT collections
+                    <br />
+                    with specify attributes
+                    <br />
+                    and rarity parameters.
+                  </p>
+                </div>
+                <div className="col col-xs-12 col-sm-12 col-md-3 col-md-3 col-lg-3 col-xxl-3 mb-4">
+                  <h4>Official Links</h4>
+                  <ul>
+                    <li>
+                      <a href="https://magiceden.io/" target="_blank">
+                        Magic Eden
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./" target="_blank">
+                        OpenSea
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/InkworkLabs" target="_blank">
+                        Twitter
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://discord.gg/InkworkLabs" target="_blank">
+                        Discord
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://instagram.com/InkworkLabs"
+                        target="_blank"
+                      >
+                        Instgram
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank">
+                        Medium
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col col-xs-12 col-sm-12 col-md-2 col-md-2 col-lg-2 col-xxl-2 mb-4">
+                  <h4>Resources</h4>
+                  <ul>
+                    <li>
+                      <a href="./aboutus.php">About Us</a>
+                    </li>
+                    <li>
+                      <a href="./support.php">Support</a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://inkwork-labs.gitbook.io/inkwork-labs/get-started/project-overview"
+                        target="_blank"
+                      >
+                        Whitepaper
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./faq.php">FAQ</a>
+                    </li>
+                    <li>
+                      <a href="./sysyemstatus.php">System Status</a>
+                    </li>
+                    <li>
+                      <a href="./copyright.php">Copyright Policy</a>
+                    </li>
+                    <li>
+                      <a href="./terms.php">Tersm of Service</a>
+                    </li>
+                    <li>
+                      <a href="./privacy.php">Privacy Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="row px-5 pt-0 pb-4">
+                <div className="col copyright">
+                  <small>© 2022 Inkwork Labs, Inc. All Rights Reserved.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        {/* <!-- Back-to-top --> */}
+        <button
+          type="button"
+          className="btn btn-info btn-floating btn-md text-white shadow-none"
+          id="btn-back-to-top"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <i className="fas fa-arrow-up"></i>
+        </button>
+        {/* <!-- JS --> */}
+        <script
+          src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+          crossOrigin="anonymous"
+        ></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/aos.js"></script>
+        <script src="./assets/js/offcanvas.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script>AOS.init();</script>
+      </div>
+    </>
+    // </div>
   );
 }
 
