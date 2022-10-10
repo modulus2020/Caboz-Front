@@ -24,7 +24,11 @@ const Nav = () => {
               href="#"
               className="text-white dropdown-toggle"
               data-bs-toggle="dropdown"
-              onClick={() => setToggleSmallNav(!toggleSmallNav)}
+              onClick={() => {
+                setToggleSmallNav(!toggleSmallNav)
+                setCollapseNav(false);
+              
+              }}
             >
               <i className="fa-regular fa-circle-user f-icons profile-icon"></i>
             </a>
@@ -128,7 +132,11 @@ const Nav = () => {
             type="button"
             id="navbarSideCollapse"
             aria-label="Toggle navigation"
-            onClick={() => setCollapseNav(!collapseNav)}
+            onClick={() => {
+              setCollapseNav(!collapseNav);
+              setToggleSmallNav(false)
+
+            }}
           >
             <div className="animated-icon2">
               <span></span>
@@ -153,39 +161,42 @@ const Nav = () => {
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle px-4 text-white main-links"
-                  onClick={()=> setFullScreenOrder(!fullScreenOrder)}
+                  onClick={() => setFullScreenOrder(!fullScreenOrder)}
                 >
                   Orders
                 </a>
                 {fullScreenOrder ? (
-                <ul className="dropdown-menu dropdown-menu-dark " style={{display: "block"}}>
-                  <li>
-                    <a
-                      className="dropdown-item"
-                      href="./create-order-step1.php"
-                    >
-                      Create New Order
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="./my-orders.php">
-                      My Orders
-                    </a>
-                  </li>
-                </ul>
+                  <ul
+                    className="dropdown-menu dropdown-menu-dark "
+                    style={{ display: "block" }}
+                  >
+                    <li>
+                      <a
+                        className="dropdown-item"
+                        href="./create-order-step1.php"
+                      >
+                        Create New Order
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="./my-orders.php">
+                        My Orders
+                      </a>
+                    </li>
+                  </ul>
                 ) : null}
               </li>
               <li className="nav-item">
-                <a
-                  href="./market.php"
+                <Link
+                  to={"/market"}
                   className="nav-link px-4 text-white main-links"
                 >
                   Market
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a
-                  href="./activity.php"
+                  href="./activity"
                   className="nav-link px-4 text-white main-links"
                 >
                   Activity
@@ -200,7 +211,7 @@ const Nav = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   data-bs-display="static"
-                  onClick={()=> setToggleFullscreenNav(!toggleFullscreenNav)}
+                  onClick={() => setToggleFullscreenNav(!toggleFullscreenNav)}
                 >
                   <i className="fa-regular fa-circle-user f-icons"></i>
                 </button>
@@ -308,54 +319,57 @@ const Nav = () => {
             >
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
                 <li className="nav-item">
-                  <a
-                    href="./collection.php"
+                  <Link
+                    to={"/collection"}
                     className="nav-link px-4 text-white main-links"
                   >
                     Collections
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle px-4 text-white main-links"
                     href="#"
-                    onClick={()=> setSmallScreenOrder(!smallScreenOrder)}
+                    onClick={() => setSmallScreenOrder(!smallScreenOrder)}
                   >
                     Orders
                   </a>
                   {smallScreenOrder ? (
-                  <ul className="dropdown-menu dropdown-menu-dark" style={{display: "block"}}>
-                    <li>
-                      <a
-                        className="dropdown-item"
-                        href="./create-order-step1.php"
-                      >
-                        Create New Order
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="./my-orders.php">
-                        My Orders
-                      </a>
-                    </li>
-                  </ul>
-                    ) : null}
+                    <ul
+                      className="dropdown-menu dropdown-menu-dark"
+                      style={{ display: "block" }}
+                    >
+                      <li>
+                        <a
+                          className="dropdown-item"
+                          href="./create-order-step1.php"
+                        >
+                          Create New Order
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="./my-orders.php">
+                          My Orders
+                        </a>
+                      </li>
+                    </ul>
+                  ) : null}
                 </li>
                 <li className="nav-item">
-                  <a
-                    href="./market.php"
+                  <Link
+                    to={"/market"}
                     className="nav-link px-4 text-white main-links"
                   >
                     Market
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a
-                    href="./activity.php"
+                  <Link
+                    to={"/activity"}
                     className="nav-link px-4 text-white main-links"
                   >
                     Activity
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <ul className="navbar-nav flex-row flex-wrap ms-md-auto ul-link-center d-none d-lg-block">
