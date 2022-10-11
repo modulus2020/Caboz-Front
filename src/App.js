@@ -8,6 +8,10 @@ import Home from "./pages/Home";
 import Collection from "./pages/Collection";
 import Market from "./pages/Market";
 import Activity from "./pages/Activity";
+import Myorders from "./pages/Myorders";
+import Orderone from "./pages/Orderone";
+import Ordertwo from "./pages/Ordertwo";
+import Orderthree from "./pages/Orderthree";
 import { Route, Routes } from "react-router-dom";
 
 
@@ -19,6 +23,12 @@ function App() {
           <Route path="/collection" element={<Collection/>} />
           <Route path="/market" element={<Market/>} />
           <Route path="/activity" element={<Activity/>} />
+          <Route path="/my-orders" element={<Myorders/>} />
+          <Route path="*" element={<Home/>} />
+          <Route path="/order-step1" element={<Orderone/>} />
+          <Route path="/order-step2" element={<Ordertwo/>} />
+          <Route path="/order-step3" element={<Orderthree/>} />
+
         </Routes>
     </div>
     // </div>

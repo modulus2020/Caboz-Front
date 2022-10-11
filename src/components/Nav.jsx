@@ -171,17 +171,17 @@ const Nav = () => {
                     style={{ display: "block" }}
                   >
                     <li>
-                      <a
+                      <Link
                         className="dropdown-item"
-                        href="./create-order-step1.php"
+                        to={"/order-step1"}
                       >
                         Create New Order
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="./my-orders.php">
+                      <Link className="dropdown-item" to={"/my-orders"}>
                         My Orders
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 ) : null}
@@ -348,9 +348,9 @@ const Nav = () => {
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="./my-orders.php">
+                        <Link className="dropdown-item" to={"/my-orders"}>
                           My Orders
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   ) : null}
