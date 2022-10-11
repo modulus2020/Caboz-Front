@@ -82,7 +82,7 @@ const Ordertwo = () => {
                       <div id="getProject" className="float-right">
                         <img
                           src="./assets/images/projects/<?php echo str_replace(' ', '', strtolower($item));?>.png"
-                          className="mx-2 searchimg"
+                          className="mx-2 searchimg inline-block"
                         />
                         Hello
                       </div>
@@ -93,7 +93,8 @@ const Ordertwo = () => {
                       <div id="getProject" className="float-right">
                         <img
                           src="./assets/images/projects/<?php echo str_replace(' ', '', strtolower($item));?>.png"
-                          className="mx-2 searchimg"
+                          className="mx-2 searchimg inline-block"
+
                         />
                         Hello
                       </div>
@@ -445,13 +446,15 @@ const Ordertwo = () => {
         </div>
       </footer>
       {/* <!-- Back-to-top --> */}
-      <button
+      <a
+        href="#"
         type="button"
         className="btn btn-info btn-floating btn-md text-white shadow-none"
         id="btn-back-to-top"
+        style={{display: "block"}}
       >
         <i className="fas fa-arrow-up"></i>
-      </button>
+      </a>
       {/* <!-- JS --> */}
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"

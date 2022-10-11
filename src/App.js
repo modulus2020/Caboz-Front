@@ -12,6 +12,7 @@ import Myorders from "./pages/Myorders";
 import Orderone from "./pages/Orderone";
 import Ordertwo from "./pages/Ordertwo";
 import Orderthree from "./pages/Orderthree";
+import Ordersuccess from "./pages/Ordersuccess";
 import { Route, Routes } from "react-router-dom";
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/order-step1" element={<Orderone/>} />
           <Route path="/order-step2" element={<Ordertwo/>} />
           <Route path="/order-step3" element={<Orderthree/>} />
+          <Route path="/ordersuccess" element={<Ordersuccess/>} />
 
         </Routes>
     </div>

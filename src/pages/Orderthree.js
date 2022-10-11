@@ -1,4 +1,9 @@
 import React from "react";
+import Loader from "../components/Loader";
+import Nav from "../components/Nav";
+import solicon from "../assets/images/sol-icon.png";
+
+
 
 const Orderthree = () => {
   return (
@@ -25,282 +30,16 @@ const Orderthree = () => {
       />
 
       {/* <!-- Loading --> */}
-      <div id="overlay" style="display:none;">
-        <div className="spinner"></div>
-        <br />
-        Loading...
-      </div>
+     <Loader/>
       {/* <!-- Header --> */}
       <header>
         {/* <!-- Main Navigation --> */}
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-          <div className="container container-relative">
-            <a className="navbar-brand" href="./">
-              Caboz
-            </a>
-            <div className="dropdown profile-dp d-block d-lg-none mob-wallet-details">
-              <a
-                href="#"
-                className="text-white dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                <i className="fa-regular fa-circle-user f-icons profile-icon"></i>
-              </a>
-              <div className="dropdown-menu dropdown-menu-dark dropdown-menu-end text-left account-settings-mob mobile-nav-settings">
-                <table width="100%">
-                  <tr>
-                    <td className="text-left">
-                      <h6 className="dropdown-header text-white">
-                        <b>Wallet</b>
-                      </h6>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="px-3 pb-1">
-                      <a className="walletid">Cc13hc....ui971uw</a>
-                    </td>
-                  </tr>
-                  <tr className="li-details">
-                    <td className="px-2">
-                      <table width="100%">
-                        <tr>
-                          <td>Available SOL</td>
-                          <td className="text-right">
-                            <img
-                              src="./assets/images/sol-icon.png"
-                              className="sol-icon"
-                            />{" "}
-                            74.3243
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Locked SOL</td>
-                          <td className="text-right">
-                            <img
-                              src="./assets/images/sol-icon.png"
-                              className="sol-icon"
-                            />{" "}
-                            46.8918
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Active Trades</td>
-                          <td className="text-right">08</td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="hr-div px-2" colspan="2">
-                      <hr />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="hr-div px-2" colspan="2">
-                      <a href="./profile.php">My Profile</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="hr-div px-2" colspan="2">
-                      <a href="./order-history.php">My Order History</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="hr-div px-2" colspan="2">
-                      <a href="./settings.php">Settings</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="hr-div px-2" colspan="2">
-                      <hr />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="hr-div px-2" colspan="2">
-                      <a href="./">Switch Account</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="hr-div px-2" colspan="2">
-                      <a href="./">Logout</a>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-
-            <button
-              className="navbar-toggler second-button shadow-none"
-              type="button"
-              id="navbarSideCollapse"
-              aria-label="Toggle navigation"
-            >
-              <div className="animated-icon2">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </button>
-
-            <div className="navbar-collapse offcanvas-collapse" id="navbarCollapse">
-              <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                <li className="nav-item">
-                  <a
-                    href="./collection.php"
-                    className="nav-link px-4 text-white main-links"
-                  >
-                    Collections
-                  </a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle px-4 text-white main-links active"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Orders
-                  </a>
-                  <ul className="dropdown-menu dropdown-menu-dark ">
-                    <li>
-                      <a className="dropdown-item" href="./create-order-step1.php">
-                        Create New Order
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="./my-orders.php">
-                        My Orders
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <a
-                    href="./market.php"
-                    className="nav-link px-4 text-white main-links"
-                  >
-                    Market
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    href="./activity.php"
-                    className="nav-link px-4 text-white main-links"
-                  >
-                    Activity
-                  </a>
-                </li>
-              </ul>
-              <ul className="navbar-nav flex-row flex-wrap ms-md-auto ul-link-center d-none d-lg-block">
-                <li className="nav-item dropdown mx-auto">
-                  <button
-                    type="button"
-                    className="mx-auto btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle shadow-none"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    data-bs-display="static"
-                  >
-                    <i className="fa-regular fa-circle-user f-icons"></i>
-                  </button>
-                  <ul
-                    className="dropdown-menu dropdown-menu-dark dropdown-menu-end account-settings"
-                    data-bs-popper="static"
-                  >
-                    <li>
-                      <h6 className="dropdown-header text-white">
-                        <b>Wallet</b>
-                      </h6>
-                    </li>
-                    <li className="px-3 pb-1">
-                      <a className="walletid">Cc13hc....ui971uw</a>
-                    </li>
-                    <li className="li-details">
-                      <a className="dropdown-item menuli">
-                        <table width="100%">
-                          <tr>
-                            <td>Available SOL</td>
-                            <td className="text-right">
-                              <img
-                                src="./assets/images/sol-icon.png"
-                                className="sol-icon"
-                              />{" "}
-                              74.3243
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Locked SOL</td>
-                            <td className="text-right">
-                              <img
-                                src="./assets/images/sol-icon.png"
-                                className="sol-icon"
-                              />{" "}
-                              46.8918
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Active Trades</td>
-                            <td className="text-right">08</td>
-                          </tr>
-                        </table>
-                      </a>
-                    </li>
-                    <li className="hr-div">
-                      <hr />
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown-item menuli current"
-                        aria-current="true"
-                        href="./profile.php"
-                      >
-                        My Profile
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown-item menuli current"
-                        aria-current="true"
-                        href="./order-history.php"
-                      >
-                        My Order History
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown-item menuli current"
-                        aria-current="true"
-                        href="./settings.php"
-                      >
-                        Settings
-                      </a>
-                    </li>
-                    <li className="hr-div">
-                      <hr />
-                    </li>
-                    <li>
-                      <a className="dropdown-item menuli" href="./switch.php">
-                        Switch Account
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item menuli" href="./logout.php">
-                        Logout
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <Nav/>
       </header>
       {/* <!-- Main --> */}
       <main className="container mt-5">
         <div
-          className="mt-5 mb-4 aos-init gx-0 pb-4 mb-5"
-          data-aos="fade-up"
-          data-aos-duration="2000"
+          className="mt-5 mb-4 aos-init gx-0 pb-4"
         >
           <div className="row row-cols-1 px-1 pt-4">
             <div className="col-sm-1 col-md-2"></div>
@@ -329,7 +68,7 @@ const Orderthree = () => {
                       <button
                         type="button"
                         id="prevBtn"
-                        onclick="history.back()"
+                        // onClick="history.back()"
                         className="absolute"
                       >
                         <i className="fa-solid fa-angle-left"></i>
@@ -353,12 +92,14 @@ const Orderthree = () => {
 								?> */}
 
                       <table width="100%">
+                        <tbody>
                         <tr>
                           <td className="p-1"></td>
                           <td className="p-1 text-right">
                             <img
                               src="./assets/images/projects/<?php echo str_replace(' ', '', strtolower($item));?>.png"
-                              className="mx-2 searchimg"
+                              className="mx-2 searchimg inline-block "
+                              
                             />
                             Item
                           </td>
@@ -369,7 +110,8 @@ const Orderthree = () => {
                           </td>
                           <td className="p-1 text-right">
                             <img
-                              src="./assets/images/sol-icon.png"
+                              src={solicon}
+                              style={{display: "inline-block"}}
                               className="sol-icon mx-1"
                             />{" "}
                             <span id="show_price" className="summary-item">
@@ -401,7 +143,8 @@ const Orderthree = () => {
                           </td>
                           <td className="p-1 text-right">
                             <img
-                              src="./assets/images/sol-icon.png"
+                              src={solicon}
+                              style={{display: "inline-block"}}
                               className="sol-icon mx-1"
                             />{" "}
                             <span id="show_ordervalue" className="summary-item">
@@ -415,7 +158,8 @@ const Orderthree = () => {
                           </td>
                           <td className="p-1 text-right">
                             <img
-                              src="./assets/images/sol-icon.png"
+                              src={solicon}
+                              style={{display: "inline-block"}}
                               className="sol-icon mx-1"
                             />{" "}
                             <span id="show_fees" className="summary-item">
@@ -429,7 +173,8 @@ const Orderthree = () => {
                           </td>
                           <td className="p-1 text-right">
                             <img
-                              src="./assets/images/sol-icon.png"
+                              src={solicon}
+                              style={{display: "inline-block"}}
                               className="sol-icon mx-1"
                             />{" "}
                             <span id="totalSOL" className="summary-item">
@@ -437,6 +182,7 @@ const Orderthree = () => {
                             </span>
                           </td>
                         </tr>
+                        </tbody>
                       </table>
                       <hr className="hr-steps" />
                       {/* <?php 
@@ -445,6 +191,7 @@ const Orderthree = () => {
 									 
 									?> */}
                       <table width="100%">
+                        <tbody>
                         <tr className="totals">
                           <td className="p-1">
                             <label className="text-yellow">
@@ -453,7 +200,8 @@ const Orderthree = () => {
                           </td>
                           <td className="p-1 text-right">
                             <img
-                              src="./assets/images/sol-icon.png"
+                              src={solicon}
+                              style={{display: "inline-block"}}
                               className="sol-icon mx-1"
                             />{" "}
                             <span id="totalSOL" className="summary-item">
@@ -461,6 +209,7 @@ const Orderthree = () => {
                             </span>
                           </td>
                         </tr>
+                        </tbody>
                       </table>
                     </div>
                   </div>
@@ -578,18 +327,20 @@ const Orderthree = () => {
         </div>
       </footer>
       {/* <!-- Back-to-top --> */}
-      <button
+      <a
+        href="#"
         type="button"
         className="btn btn-info btn-floating btn-md text-white shadow-none"
         id="btn-back-to-top"
+        style={{display: "block"}}
       >
         <i className="fas fa-arrow-up"></i>
-      </button>
+      </a>
       {/* <!-- JS --> */}
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"
+     
       ></script>
       <script src="./assets/js/bootstrap.bundle.min.js"></script>
       <script src="./assets/js/aos.js"></script>

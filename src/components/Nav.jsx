@@ -61,6 +61,7 @@ const Nav = () => {
                               <td className="text-right">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol-icon"
                                 />{" "}
@@ -72,6 +73,7 @@ const Nav = () => {
                               <td className="text-right">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol-icon"
                                 />{" "}
@@ -239,6 +241,7 @@ const Nav = () => {
                               <td className="text-right">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol-icon"
                                 />{" "}
@@ -250,6 +253,7 @@ const Nav = () => {
                               <td className="text-right">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol-icon"
                                 />{" "}
@@ -408,6 +412,7 @@ const Nav = () => {
                                 <td className="text-right">
                                   <img
                                     src={solicon}
+                                    style={{display: "inline-block"}}
                                     className="sol-icon"
                                     alt="sol-icon"
                                   />{" "}
@@ -419,6 +424,7 @@ const Nav = () => {
                                 <td className="text-right">
                                   <img
                                     src={solicon}
+                                    style={{display: "inline-block"}}
                                     className="sol-icon"
                                     alt="sol-icon"
                                   />{" "}
