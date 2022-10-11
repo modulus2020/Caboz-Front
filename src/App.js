@@ -13,6 +13,7 @@ import Orderone from "./pages/Orderone";
 import Ordertwo from "./pages/Ordertwo";
 import Orderthree from "./pages/Orderthree";
 import Ordersuccess from "./pages/Ordersuccess";
+import Multistep from "./pages/Multistep";
 import { Route, Routes } from "react-router-dom";
 
 
@@ -30,7 +31,7 @@ function App() {
           <Route path="/order-step2" element={<Ordertwo/>} />
           <Route path="/order-step3" element={<Orderthree/>} />
           <Route path="/ordersuccess" element={<Ordersuccess/>} />
-
+          <Route path="/multistepform" element={<Multistep/>} />
         </Routes>
     </div>
     // </div>
