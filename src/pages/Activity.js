@@ -63,30 +63,7 @@ import i381 from "../assets/images/nfts/381.png"
 const Activity = () => {
   return (
     <div>
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Caboz Tool by Inkwork Labs" />
-        <meta name="author" content="Caboz" />
-        <title>Caboz Tool by Inkwork Labs</title>
-        {/* <!-- Styles --> */}
-        <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="./assets/css/style.css" rel="stylesheet" />
-        <link href="./assets/css/aos.css" rel="stylesheet" />
-        <link href="./assets/css/offcanvas.css" rel="stylesheet" />
-        {/* <!-- Fonts --> */}
-        <link
-          href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.css"
-          rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        {/* <!-- Favicon and Touch Icons --> */}
-        <link rel="shortcut icon" href="assets/images/favicon.png" />
-        <link
-          rel="apple-touch-icon-precomposed"
-          href="assets/images/favicon.png"
-        />
-      </head>
+     
 
       {/* <!-- Loading --> */}
       <Loader />
@@ -96,636 +73,635 @@ const Activity = () => {
         <Nav />
       </header>
       {/* <!-- Main --> */}
-      <main class="container mt-5">
-        <div class="row collections row-cols-1 mt-5 mb-4 aos-init gx-0 pb-4 ">
+      <main className="container mt-5">
+        <div className="row collections row-cols-1 mt-5 mb-4 aos-init gx-0 pb-4 ">
           {/* <!-- Collections --> */}
-          <div class="px-2 py-4 row row-cols-1">
-            <div class="col-xs-12 col-sm-12 col-md-7">
-              <h3 class="mx-2">Activity</h3>
+          <div className="px-2 py-4 row row-cols-1">
+            <div className="col-xs-12 col-sm-12 col-md-7">
+              <h3 className="mx-2">Activity</h3>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-5 form-search mb-2">
-              <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+            <div className="col-xs-12 col-sm-6 col-md-5 form-search mb-2">
+              <i className="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
               <input
                 type="text"
-                class="form-control form-input"
+                className="form-control form-input"
                 placeholder="Search for a collection ..."
                 id="search-input"
-                onkeyup="searchActivity()"
               />
             </div>
           </div>
-          <div class="row row-cols-1 px-1">
-            <div class="col col-xs-1">
-              <div class="table-responsive text-nowrap">
+          <div className="row row-cols-1 px-1">
+            <div className="col col-xs-1">
+              <div className="table-responsive text-nowrap">
                 <table
-                  class="table table-sm table-borderless white-text my-0 text-small"
+                  className="table table-sm table-borderless white-text my-0 text-small"
                   id="activity-table"
                 >
                   <thead>
                     <tr>
                       <th
-                        class="valign-mid text-center text-theader"
-                        colspan="2"
+                        className="valign-mid text-center text-theader"
+                        colSpan="2"
                       >
                         Name
                       </th>
-                      <th class="valign-mid text-right text-theader">Price</th>
-                      <th class="valign-mid text-center text-theader">Buyer</th>
-                      <th class="valign-mid text-center text-theader">
+                      <th className="valign-mid text-right text-theader">Price</th>
+                      <th className="valign-mid text-center text-theader">Buyer</th>
+                      <th className="valign-mid text-center text-theader">
                         Transaction ID
                       </th>
-                      <th class="valign-mid text-center text-theader">Type</th>
-                      <th class="valign-mid text-center text-theader">Time</th>
+                      <th className="valign-mid text-center text-theader">Type</th>
+                      <th className="valign-mid text-center text-theader">Time</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i12}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Inkwork Labs #1234</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         17.65
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">17 minutes ago</td>
+                      <td className="text-center valign-mid">17 minutes ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i62}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Cets On Creck #612</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         36.50
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">31 minutes ago</td>
+                      <td className="text-center valign-mid">31 minutes ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i1211}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Communi3 #1211</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         14.33
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">59 minutes ago</td>
+                      <td className="text-center valign-mid">59 minutes ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i33}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Vandals #333</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         7.65
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">1 hour ago</td>
+                      <td className="text-center valign-mid">1 hour ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i45}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Primates #4583</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         11.90
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">1 hour ago</td>
+                      <td className="text-center valign-mid">1 hour ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i93}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Primates #9373</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         13
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">1 hour ago</td>
+                      <td className="text-center valign-mid">1 hour ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i56}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Jikan #5611</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         2.99
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">3 hours ago</td>
+                      <td className="text-center valign-mid">3 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i21}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Rakkudos #2112</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         4.10
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">3 hours ago</td>
+                      <td className="text-center valign-mid">3 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i41}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Blacksmith Labs #4121</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         51.50
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">3 hours ago</td>
+                      <td className="text-center valign-mid">3 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i219}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Rakkudos #129</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         3.95
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">4 hours ago</td>
+                      <td className="text-center valign-mid">4 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i791}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Communi3 #791</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         11.75
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">4 hours ago</td>
+                      <td className="text-center valign-mid">4 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i610}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Vandals #610</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         7.50
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">5 hours ago</td>
+                      <td className="text-center valign-mid">5 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i9119}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>DeGods #9119</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         301
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">5 hours ago</td>
+                      <td className="text-center valign-mid">5 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i7102}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Okay Bears #7102</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         55
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">5 hours ago</td>
+                      <td className="text-center valign-mid">5 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i710}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Okay Bears #710</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         59.50
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">6 hours ago</td>
+                      <td className="text-center valign-mid">6 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i3122}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Blocksmith Labs #3122</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         44.50
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">6 hours ago</td>
+                      <td className="text-center valign-mid">6 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i5510}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>DeGods #5510</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         290
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">6 hours ago</td>
+                      <td className="text-center valign-mid">6 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i1092}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>DeGods #1092</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         333.33
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">6 hours ago</td>
+                      <td className="text-center valign-mid">6 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i7777}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Okay Bears #7777</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         61.50
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">8 hours ago</td>
+                      <td className="text-center valign-mid">8 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i9651}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>DeGods #9651</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         310
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">8 hours ago</td>
+                      <td className="text-center valign-mid">8 hours ago</td>
                     </tr>
-                    <tr class="goto-collection" onclick="window.location='';">
-                      <td class="valign-mid" width="70px">
-                        <a href="#" class="project-link">
+                    <tr className="goto-collection" >
+                      <td className="valign-mid" width="70px">
+                        <a href="#" className="project-link">
                           <img
                             src={i381}
                             alt=""
-                            class="img-fluid mx-auto d-block proj-img"
+                            className="img-fluid mx-auto d-block proj-img"
                           />
                         </a>
                       </td>
-                      <td class="valign-mid">
+                      <td className="valign-mid">
                         <span>Blocksmith Labs #381</span>
                       </td>
-                      <td class="text-right valign-mid">
+                      <td className="text-right valign-mid">
                         <img
                           src={solicon}
                           style={{display: "inline-block"}}
-                          class="sol-icon"
+                          className="sol-icon"
                         />{" "}
                         52.25
                       </td>
-                      <td class="text-center valign-mid">someone.sol</td>
-                      <td class="text-center valign-mid">2zZ8y3du45d...4ch</td>
-                      <td class="text-center valign-mid">
-                        <span class="text-green">Buy</span>
+                      <td className="text-center valign-mid">someone.sol</td>
+                      <td className="text-center valign-mid">2zZ8y3du45d...4ch</td>
+                      <td className="text-center valign-mid">
+                        <span className="text-green">Buy</span>
                       </td>
-                      <td class="text-center valign-mid">8 hours ago</td>
+                      <td className="text-center valign-mid">8 hours ago</td>
                     </tr>
                   </tbody>
                 </table>
@@ -736,10 +712,10 @@ const Activity = () => {
       </main>
       {/* <!-- Footer --> */}
       <footer>
-        <div class="container">
-          <div class="footer gx-0">
-            <div class="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-4 row-cols-lg-4 row-cols-xxl-4 p-5 pb-0">
-              <div class="col col-xs-12 col-sm-12 col-sm-5 col-md-5 col-lg-5 col-xxl-5 mb-4">
+        <div className="container">
+          <div className="footer gx-0">
+            <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-4 row-cols-lg-4 row-cols-xxl-4 p-5 pb-0">
+              <div className="col col-xs-12 col-sm-12 col-sm-5 col-md-5 col-lg-5 col-xxl-5 mb-4">
                 <h1>Caboz</h1>
                 <p>
                   With CABOZ users can place
@@ -751,7 +727,7 @@ const Activity = () => {
                   and rarity parameters.
                 </p>
               </div>
-              <div class="col col-xs-12 col-sm-12 col-md-3 col-md-3 col-lg-3 col-xxl-3 mb-4">
+              <div className="col col-xs-12 col-sm-12 col-md-3 col-md-3 col-lg-3 col-xxl-3 mb-4">
                 <h4>Official Links</h4>
                 <ul>
                   <li>
@@ -786,7 +762,7 @@ const Activity = () => {
                   </li>
                 </ul>
               </div>
-              <div class="col col-xs-12 col-sm-12 col-md-2 col-md-2 col-lg-2 col-xxl-2 mb-4">
+              <div className="col col-xs-12 col-sm-12 col-md-2 col-md-2 col-lg-2 col-xxl-2 mb-4">
                 <h4>Resources</h4>
                 <ul>
                   <li>
@@ -821,8 +797,8 @@ const Activity = () => {
                 </ul>
               </div>
             </div>
-            <div class="row px-5 pt-0 pb-4">
-              <div class="col copyright">
+            <div className="row px-5 pt-0 pb-4">
+              <div className="col copyright">
                 <small>© 2022 Inkwork Labs, Inc. All Rights Reserved.</small>
               </div>
             </div>
@@ -832,16 +808,16 @@ const Activity = () => {
       {/* <!-- Back-to-top --> */}
       <button
         type="button"
-        class="btn btn-info btn-floating btn-md text-white shadow-none"
+        className="btn btn-info btn-floating btn-md text-white shadow-none"
         id="btn-back-to-top"
       >
-        <i class="fas fa-arrow-up"></i>
+        <i className="fas fa-arrow-up"></i>
       </button>
       {/* <!-- JS --> */}
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"
+       
       ></script>
       <script src="./assets/js/bootstrap.bundle.min.js"></script>
       <script src="./assets/js/aos.js"></script>

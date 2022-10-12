@@ -306,6 +306,7 @@ const Home = () => {
                                 Floor{" "}
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -314,6 +315,7 @@ const Home = () => {
                               <div className="col-5 text-right text-small">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -360,6 +362,7 @@ const Home = () => {
                                 Floor{" "}
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -368,6 +371,7 @@ const Home = () => {
                               <div className="col-5 text-right text-small">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -414,6 +418,7 @@ const Home = () => {
                                 Floor{" "}
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -422,6 +427,7 @@ const Home = () => {
                               <div className="col-5 text-right text-small">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -485,6 +491,7 @@ const Home = () => {
                                 Floor{" "}
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -493,6 +500,7 @@ const Home = () => {
                               <div className="col-5 text-right text-small">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -539,6 +547,7 @@ const Home = () => {
                                 Floor{" "}
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -547,6 +556,7 @@ const Home = () => {
                               <div className="col-5 text-right text-small">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -593,6 +603,7 @@ const Home = () => {
                                 Floor{" "}
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -601,6 +612,7 @@ const Home = () => {
                               <div className="col-5 text-right text-small">
                                 <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                   alt="sol icon"
                                 />{" "}
@@ -663,6 +675,7 @@ const Home = () => {
                                 <br />
                                 Floor <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                 />{" "}
                                 3.65
@@ -708,6 +721,7 @@ const Home = () => {
                                 <br />
                                 Floor <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                 />{" "}
                                 16.25
@@ -753,6 +767,7 @@ const Home = () => {
                                 <br />
                                 Floor <img
                                   src={solicon}
+                                  style={{display: "inline-block"}}
                                   className="sol-icon"
                                 />{" "}
                                 7.5
@@ -825,10 +840,12 @@ const Home = () => {
                             <span className="project-title-0">DeGods</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 324.75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 324.75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 311
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 311
                           </td>
                           <td className="text-right valign-mid">237</td>
                         </tr>
@@ -854,10 +871,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 11.45
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 11.45
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 9.1
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 9.1
                           </td>
                           <td className="text-right valign-mid">222</td>
                         </tr>
@@ -883,10 +902,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 16.25
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 16.25
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 14.5
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 14.5
                           </td>
                           <td className="text-right valign-mid">203</td>
                         </tr>
@@ -910,10 +931,12 @@ const Home = () => {
                             <span className="project-title-0">Froots</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 3.65
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 3.65
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 2.95
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 2.95
                           </td>
                           <td className="text-right valign-mid">199</td>
                         </tr>
@@ -939,10 +962,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 69
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 69
                           </td>
                           <td className="text-right valign-mid">184</td>
                         </tr>
@@ -966,10 +991,12 @@ const Home = () => {
                             <span className="project-title-0">Vandal City</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 324.75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 324.75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 311
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 311
                           </td>
                           <td className="text-right valign-mid">237</td>
                         </tr>
@@ -993,10 +1020,12 @@ const Home = () => {
                             <span className="project-title-0">Okay Bears</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 11.45
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 11.45
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 9.1
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 9.1
                           </td>
                           <td className="text-right valign-mid">222</td>
                         </tr>
@@ -1020,10 +1049,12 @@ const Home = () => {
                             <span className="project-title-0">Aurory</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 16.25
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 16.25
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 14.5
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 14.5
                           </td>
                           <td className="text-right valign-mid">203</td>
                         </tr>
@@ -1049,10 +1080,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 3.65
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 3.65
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 2.95
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 2.95
                           </td>
                           <td className="text-right valign-mid">199</td>
                         </tr>
@@ -1078,10 +1111,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 69
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 69
                           </td>
                           <td className="text-right valign-mid">184</td>
                         </tr>
@@ -1130,10 +1165,12 @@ const Home = () => {
                             <span className="project-title-0">Vandal City</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 324.75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 324.75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 311
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 311
                           </td>
                           <td className="text-right valign-mid">237</td>
                         </tr>
@@ -1157,10 +1194,12 @@ const Home = () => {
                             <span className="project-title-0">Okay Bears</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 11.45
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 11.45
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 9.1
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 9.1
                           </td>
                           <td className="text-right valign-mid">222</td>
                         </tr>
@@ -1184,10 +1223,12 @@ const Home = () => {
                             <span className="project-title-0">Aurory</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 16.25
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 16.25
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 14.5
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 14.5
                           </td>
                           <td className="text-right valign-mid">203</td>
                         </tr>
@@ -1213,10 +1254,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 3.65
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 3.65
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 2.95
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 2.95
                           </td>
                           <td className="text-right valign-mid">199</td>
                         </tr>
@@ -1242,10 +1285,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 69
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 69
                           </td>
                           <td className="text-right valign-mid">184</td>
                         </tr>
@@ -1305,10 +1350,12 @@ const Home = () => {
                             <span className="project-title-0">DeGods</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 324.75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 324.75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 311
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 311
                           </td>
                           <td className="text-right valign-mid">237</td>
                         </tr>
@@ -1334,10 +1381,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 11.45
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 11.45
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 9.1
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 9.1
                           </td>
                           <td className="text-right valign-mid">222</td>
                         </tr>
@@ -1363,10 +1412,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 16.25
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 16.25
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 14.5
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 14.5
                           </td>
                           <td className="text-right valign-mid">203</td>
                         </tr>
@@ -1390,10 +1441,12 @@ const Home = () => {
                             <span className="project-title-0">Froots</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 3.65
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 3.65
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 2.95
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 2.95
                           </td>
                           <td className="text-right valign-mid">199</td>
                         </tr>
@@ -1419,10 +1472,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 69
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 69
                           </td>
                           <td className="text-right valign-mid">184</td>
                         </tr>
@@ -1446,10 +1501,12 @@ const Home = () => {
                             <span className="project-title-0">Vandal City</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 324.75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 324.75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 311
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 311
                           </td>
                           <td className="text-right valign-mid">237</td>
                         </tr>
@@ -1473,10 +1530,12 @@ const Home = () => {
                             <span className="project-title-0">Okay Bears</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 11.45
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 11.45
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 9.1
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 9.1
                           </td>
                           <td className="text-right valign-mid">222</td>
                         </tr>
@@ -1500,10 +1559,12 @@ const Home = () => {
                             <span className="project-title-0">Aurory</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 16.25
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 16.25
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 14.5
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 14.5
                           </td>
                           <td className="text-right valign-mid">203</td>
                         </tr>
@@ -1529,10 +1590,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 3.65
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 3.65
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 2.95
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 2.95
                           </td>
                           <td className="text-right valign-mid">199</td>
                         </tr>
@@ -1558,10 +1621,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 69
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 69
                           </td>
                           <td className="text-right valign-mid">184</td>
                         </tr>
@@ -1610,10 +1675,12 @@ const Home = () => {
                             <span className="project-title-0">Vandal City</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 324.75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 324.75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 311
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 311
                           </td>
                           <td className="text-right valign-mid">237</td>
                         </tr>
@@ -1637,10 +1704,12 @@ const Home = () => {
                             <span className="project-title-0">Okay Bears</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 11.45
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 11.45
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 9.1
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 9.1
                           </td>
                           <td className="text-right valign-mid">222</td>
                         </tr>
@@ -1664,10 +1733,12 @@ const Home = () => {
                             <span className="project-title-0">Aurory</span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 16.25
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 16.25
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 14.5
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 14.5
                           </td>
                           <td className="text-right valign-mid">203</td>
                         </tr>
@@ -1693,10 +1764,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 3.65
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 3.65
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 2.95
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 2.95
                           </td>
                           <td className="text-right valign-mid">199</td>
                         </tr>
@@ -1722,10 +1795,12 @@ const Home = () => {
                             </span>
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 75
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 75
                           </td>
                           <td className="text-right valign-mid">
-                            <img src={solicon} className="sol-icon" /> 69
+                            <img src={solicon}
+                            style={{display: "inline-block"}} className="sol-icon" /> 69
                           </td>
                           <td className="text-right valign-mid">184</td>
                         </tr>

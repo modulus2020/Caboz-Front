@@ -1,23 +1,18 @@
 import { React, useState } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 import "../assets/css/bootstrap.min.css";
 import "../assets/css/style.css";
 import "../assets/css/aos.css";
 import "../assets/css/offcanvas.css";
 import solicon from "../assets/images/sol-icon.png";
-import user from "../assets/images/user.png";
-import magicEden from "../assets/images/magiceden.png";
-import OpenSea from "../assets/images/opensea.png";
 import deGod from "../assets/images/projects/degods.png";
 import deMan from "../assets/images/projects/inkworklabs.png";
 import blockSmith from "../assets/images/projects/blocksmithlabs.png";
 import cetsonCreck from "../assets/images/projects/cetsoncreck.png";
 import okayBears from "../assets/images/projects/okaybears.png";
-import trippinApe from "../assets/images/projects/trippinapetribe.png";
 import froots from "../assets/images/projects/froots.png";
-import aurory from "../assets/images/projects/aurory.png";
 import vandalCity from "../assets/images/projects/vandalcity.png";
-import gothicdegens from "../assets/images/projects/gothicdegens.png";
 import rakudos from "../assets/images/projects/rakkudos.png";
 import degenFatCat from "../assets/images/projects/degenfatcats.png";
 import angel from "../assets/images/projects/aiangels.png";
@@ -47,38 +42,10 @@ import famousfox from "../assets/images/projects/famousfox.png";
 const Collection = () => {
   const [searchInput, setSeaaarchInput] = useState("");
   const [day, setDays] = useState("7 Days");
-  const [nfts, setNfts] = useState([]);
   const [showDays, setShowDays] = useState(false);
   const searchCollectionTitle = () => {};
   return (
     <div>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Caboz Tool by Inkwork Labs" />
-      <meta name="author" content="Caboz" />
-      <title>Caboz Tool by Inkwork Labs</title>
-      {/* <!-- Fonts --> */}
-      <link
-        href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.css"
-        rel="stylesheet"
-      />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"
-      />
-      {/* <!-- Favicon and Touch Icons --> */}
-      <link rel="shortcut icon" href="assets/images/favicon.png" />
-      <link
-        rel="apple-touch-icon-precomposed"
-        href="assets/images/favicon.png"
-      />
-
       <div>
         {/* <!-- Loading --> */}
         <Loader />
@@ -89,7 +56,7 @@ const Collection = () => {
         </header>
         {/* <!-- Main --> */}
         <main className="container mt-5">
-          <div className="row collections row-cols-1 mt-5 mb-4 aos-init gx-0 pb-4 mb-5">
+          <div className="row collections row-cols-1 mt-5 mb-4 aos-init gx-0 pb-4">
             {/* <!-- Collections --> */}
             <div className="px-2 py-4 row row-cols-1">
               <div className="col-xs-12 col-sm-12 col-md-6">
@@ -240,11 +207,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Inkwork Labs</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Inkwork Labs"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Inkwork Labs
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -253,6 +228,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -263,6 +239,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -292,11 +269,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Rakkudos</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Rakkudos"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Rakkudos
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -305,6 +290,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -315,6 +301,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -342,11 +329,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">DeGods</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=DeGods"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              DeGods
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -355,6 +350,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -365,6 +361,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -392,11 +389,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Okay Bears</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Okay Bears"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Okay Bears
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -405,6 +410,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -415,6 +421,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -442,11 +449,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Vandal City</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Vandal City"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Vandal City
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -455,6 +470,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -465,6 +481,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -493,12 +510,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Degen Fat Cats
+                            <Link
+                              to={"/project?nft=Degen Fat Cats"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Degen Fat Cats
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -507,6 +530,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -517,6 +541,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -544,11 +569,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">AI Angels</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Aiangels"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              AI Angels
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -557,6 +590,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -567,6 +601,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -595,12 +630,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Founders Coins
+                            <Link
+                              to={"/project?nft=Founders coins"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Founders Coins
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -609,6 +650,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -619,6 +661,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -647,12 +690,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Mischievous Maxis
+                            <Link
+                              to={"/project?nft=Mischievous Maxis"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Mischievous Maxis
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -661,6 +710,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -671,6 +721,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -698,11 +749,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">SoDead</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=So Dead"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              SoDead
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -711,6 +770,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -721,6 +781,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -748,11 +809,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Primates</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Primates"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Primates
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -761,6 +830,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -771,6 +841,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -799,12 +870,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Shadow Super Coder DAO
+                            <Link
+                              to={"/project?nft=Shadow Super Coder"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Shadow Super Coder
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -813,6 +890,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -823,6 +901,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -851,12 +930,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Genopets Genesis Habitats
+                            <Link
+                              to={"/project?nft=Geno Pets"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Geno Pets
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -865,6 +950,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -875,6 +961,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -902,11 +989,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Cets On Creck</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Cets on Creck"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Cets On Creck
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -915,6 +1010,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -925,6 +1021,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -952,11 +1049,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Froots</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Froots"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Froots
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -965,6 +1070,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -975,6 +1081,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1002,11 +1109,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Eclestia</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Eclestia"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Eclestia
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1015,6 +1130,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1025,6 +1141,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1052,11 +1169,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">JustApe</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Just Ape"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Just Ape
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1065,6 +1190,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1075,6 +1201,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1103,12 +1230,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Dust Crash & Coinflip
+                            <Link
+                              to={"/project?nft=Dust Crash Coin Flip"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Dust Crash Coin Flip
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1117,6 +1250,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1127,6 +1261,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1155,12 +1290,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Minoans of MooBaa
+                            <Link
+                              to={"/project?nft=Minoans of Moobaa"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Minoans of Moobaa
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1169,6 +1310,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1179,6 +1321,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1207,12 +1350,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Aliens Trippin High
+                            <Link
+                              to={"/project?nft=Alien Trippin High"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Alien Trippin High
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1221,6 +1370,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1231,6 +1381,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1258,11 +1409,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Jelly Rascals</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Jelly Rascals"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Jelly Rascals
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1271,6 +1430,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1281,6 +1441,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1309,12 +1470,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Blocksmith Labs
+                            <Link
+                              to={"/project?nft=Blocksmith Labs"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Blocksmith Labs
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1323,6 +1490,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1333,6 +1501,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1361,12 +1530,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Degenerate Ape Academy
+                            <Link
+                              to={"/project?nft=Degenerate Ape Academy"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Degenerate Ape Academy
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1375,6 +1550,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1385,6 +1561,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1412,11 +1589,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Jikan Studios</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Jikan Studios"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Jikan Studios
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1425,6 +1610,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1435,6 +1621,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1463,12 +1650,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Sengoku Degens
+                            <Link
+                              to={"/project?nft=Sengoku Degens"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Sengoku Degens
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1477,6 +1670,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1487,6 +1681,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1514,11 +1709,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">Infected Mob</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Infected Mob"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Infected Mob
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1527,6 +1730,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1537,6 +1741,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1565,12 +1770,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Eternal Dragons: Genesis
+                            <Link
+                              to={"/project?nft=Eternal Dragons Genesis"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Eternal Dragons Genesis
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1579,6 +1790,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1589,6 +1801,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1617,12 +1830,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Weeping Angels x Royal AI
+                            <Link
+                              to={"/project?nft=weeping Angels"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Weeping Angels
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1631,6 +1850,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1641,6 +1861,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1668,11 +1889,19 @@ const Collection = () => {
                           </a>
                         </td>
                         <td className="valign-mid">
-                          <span className="project-title-0">AI Degens</span>
+                          <span className="project-title-0">
+                            <Link
+                              to={"/project?nft=Aidegens"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              AI Degens
+                            </Link>
+                          </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1681,6 +1910,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1691,6 +1921,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1719,12 +1950,18 @@ const Collection = () => {
                         </td>
                         <td className="valign-mid">
                           <span className="project-title-0">
-                            Famous Fox Federation
+                            <Link
+                              to={"/project?nft=famousfox"}
+                              className=" no-underline text-[#42e1e6] hover:text-[#42e1e6] "
+                            >
+                              Famous Fox
+                            </Link>
                           </span>
                         </td>
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1733,6 +1970,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}
@@ -1743,6 +1981,7 @@ const Collection = () => {
                         <td className="text-right valign-mid">
                           <img
                             src={solicon}
+                            style={{ display: "inline-block" }}
                             id="sol-icon"
                             className="sol-icon"
                           />{" "}

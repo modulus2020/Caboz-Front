@@ -10,6 +10,8 @@ const Nav = () => {
   const [collapseNav, setCollapseNav] = useState(false);
   const [fullScreenOrder, setFullScreenOrder] = useState(false);
   const [smallScreenOrder, setSmallScreenOrder] = useState(false);
+  const url = window.location.pathname;
+
   // let {id} = useParams();
   // console.log(useParams());
   return (
@@ -155,7 +157,8 @@ const Nav = () => {
               <li className="nav-item">
                 <Link
                   to={"/collection"}
-                  className="nav-link px-4 text-white main-links"
+                  className="nav-link px-4  main-links"
+                  style={{ color: url === "/collection" ? "#42e1e6" : "#fff" }}
                 >
                   Collections
                 </Link>
