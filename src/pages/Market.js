@@ -55,29 +55,7 @@ const Market = () => {
   const searchOrder = () => {};
   return (
     <div>
-        <head>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Caboz Tool by Inkwork Labs" />
-      <meta name="author" content="Caboz" />
-      <title>Caboz Tool by Inkwork Labs</title>
-      {/* <!-- Styles --> */}
-      <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
-      <link href="./assets/css/style.css" rel="stylesheet" />
-      <link href="./assets/css/aos.css" rel="stylesheet" />
-      <link href="./assets/css/offcanvas.css" rel="stylesheet" />
-      {/* <!-- Fonts --> */}
-      <link
-        href="../assets/fonts/fontawesome-free-6.1.1-web/css/all.css"
-        rel="stylesheet"
-      />
-      {/* <!-- Favicon and Touch Icons --> */}
-      <link rel="shortcut icon" href="assets/images/favicon.png" />
-      <link
-        rel="apple-touch-icon-precomposed"
-        href="assets/images/favicon.png"
-      />
-      </head>
+   
 
       {/* <!-- Loading --> */}
       <Loader/>

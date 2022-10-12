@@ -16,16 +16,17 @@ import gothicdegens from "../assets/images/projects/gothicdegens.png";
 import Nav from "../components/Nav";
 import Loader from "../components/Loader";
 import { Link } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+
+import { useEffect } from "react";
 
 const Home = () => {
   return (
     <div>
       <>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Caboz Tool by Inkwork Labs" />
-        <meta name="author" content="Caboz" />
-        <title>Caboz Tool by Inkwork Labs</title>
+        
         {/* Styles  */}
         {/* <!-- Fonts --> */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -61,11 +62,14 @@ const Home = () => {
           <main className="container">
             {/* <!-- Intoduction --> */}
             <div className="caboz text-center">
-              <h3 className="display-3 fw-bold inlineblock aos-init">
+              <motion.h3 className="display-3 fw-bold inlineblock aos-init"
+              animate={{ y: 0 }} 
+              initial={{y: 100}} 
+              >
                 Place multiple limit orders
                 <br />
                 powered by buyer's market and CP
-              </h3>
+              </motion.h3>
               <br />
               <a
                 href="./market.php"

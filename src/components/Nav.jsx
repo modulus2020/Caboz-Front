@@ -347,12 +347,12 @@ const Nav = () => {
                       style={{ display: "block" }}
                     >
                       <li>
-                        <a
+                        <Link
                           className="dropdown-item"
-                          href="./create-order-step1.php"
+                          to={"./multistepform"}
                         >
                           Create New Order
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <Link className="dropdown-item" to={"/my-orders"}>
