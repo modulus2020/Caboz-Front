@@ -1,9 +1,21 @@
 import { React, useState } from "react";
 import solicon from "../assets/images/sol-icon.png";
-import Loader from "../components/Loader";
-import Nav from "../components/Nav";
+import deGods from "../assets/images/projects/degods.png";
+import InkworkLabs from "../assets/images/projects/inkworklabs.png";
+import blockSmith from "../assets/images/projects/blocksmithlabs.png";
+import CetsonCreck from "../assets/images/projects/cetsoncreck.png";
+import OkayBears from "../assets/images/projects/okaybears.png";
+import TrippingApe from "../assets/images/projects/trippinapetribe.png";
+import aurory from "../assets/images/projects/aurory.png";
+import VandalCity from "../assets/images/projects/vandalcity.png";
+import GothicDegenerates from "../assets/images/projects/gothicdegens.png";
+import degenFatCat from "../assets/images/projects/degenfatcats.png";
+import justap from "../assets/images/projects/justape.png";
+import primates from "../assets/images/projects/primates.png";
+import DegenerateApe from "../assets/images/projects/degenerateapeacademy.png";
+import Froots from "../assets/images/projects/froots.png";
 
-const Ordertwo = () => {
+const Ordertwo = ({ page, setPage, formData, setFormData }) => {
   const historyback = () => {};
   const [traits, setTraits] = useState("Select Traits");
   const [rarity, setRarity] = useState("Select Rarity");
@@ -33,15 +45,15 @@ const Ordertwo = () => {
         href="assets/images/favicon.png"
       />
       {/* <!-- Loading --> */}
-      <Loader />
+      {/* <Loader /> */}
       {/* <!-- Header --> */}
       <header>
         {/* <!-- Main Navigation --> */}
-        <Nav />
+        {/* <Nav /> */}
       </header>
       {/* <!-- Main --> */}
       <main className="container mt-5">
-        <div className="mt-5 mb-4 aos-init gx-0 pb-4 mb-5">
+        <div className="mt-5 mb-4 aos-init gx-0 pb-4">
           <div className="row row-cols-1 px-1 pt-4">
             <div className="col-sm-1 col-md-2"></div>
             <div
@@ -49,309 +61,569 @@ const Ordertwo = () => {
               id="content"
             >
               <h3 className="mt-5 page-title text-center">Create New Order</h3>
-              <form id="createForm" action="">
-                {/* <!-- start step indicators --> */}
-                <div className="form-header d-flex mb-4">
-                  <span className="stepIndicator finish">
-                    <span className="title-form">Select Collection</span>
-                  </span>
-                  <span className="stepIndicator active">
-                    Select Price & Rarity
-                  </span>
-                  <span className="stepIndicator">Confirm Order</span>
-                </div>
-                {/* <!-- end step indicators --> */}
-
-                {/* <!-- step two --> */}
-                <div className="step">
-                  {/* <?php $array = explode(",", $_GET["collections"]);
-								$i = 0;?> */}
-                  <input type="hidden" name="collections" />
-
-                  <div className="row mb-4">
-                    <div className="col-xs-12 col-sm-12 col-md-2 mt-2">
-                      <button
-                        type="button"
-                        id="prevBtn"
-                        onClick={historyback()}
+              {formData.collection.map((item, index) => {
+                // console.log(item);
+                return (
+                  <form id="createForm" key={index}>
+                    {/* <!-- start step indicators --> */}
+                    <div
+                      className="form-header mb-4  "
+                      style={{ display: index === 0 ? "flex" : "none" }}
+                      // style={`${index === 0 ? 'display: block' : 'display: none'}}`}
+                    >
+                      <span className="stepIndicator finish">
+                        <span className="title-form">Select Collection</span>
+                      </span>
+                      <span
+                        className="stepIndicator active"
+                        style={{ color: "#5ce1e6" }}
                       >
-                        <i className="fa-solid fa-angle-left"></i>
-                      </button>
+                        Select Price & Rarity
+                      </span>
+                      <span className="stepIndicator">Confirm Order</span>
                     </div>
-                    <div className="col-xs-12 col-sm-12 col-md-10 mt-2">
-                      <div id="getProject" className="float-right">
-                        <img
-                          src="./assets/images/projects/<?php echo str_replace(' ', '', strtolower($item));?>.png"
-                          className="mx-2 searchimg inline-block"
-                        />
-                        Hello
+                    {/* <!-- end step indicators --> */}
+
+                    {/* <!-- step two --> */}
+                    <div className="step">
+                      <input type="hidden" name="collections" />
+
+                      <div className="row mb-4">
+                        <div className="col-xs-12 col-sm-12 col-md-2 mt-2">
+                          <button
+                            type="button"
+                            id="prevBtn"
+                            // onClick={historyback()}
+                            onClick={() => {
+                              setPage(page - 1);
+                            }}
+                            style={{ display: index === 0 ? "block" : "none" }}
+                          >
+                            <i className="fa-solid fa-angle-left"></i>
+                          </button>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-10 mt-2">
+                          <div id="getProject" className="float-right">
+                            <img
+                              src={`${item.nft
+                                .toLowerCase()
+                                .split("")
+                                .filter((e) => e.trim().length)
+                                .join("")}.png`}
+                              className="mx-2 searchimg inline-block"
+                            />
+                            {item.nft}
+                          </div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="col-xs-12 col-sm-12 col-md-2 mt-3"></div>
-                    <div className="col-xs-12 col-sm-12 col-md-10 mt-3">
-                      <div id="getProject" className="float-right">
-                        <img
-                          src="./assets/images/projects/<?php echo str_replace(' ', '', strtolower($item));?>.png"
-                          className="mx-2 searchimg inline-block"
-
-                        />
-                        Hello
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-4 mb-2 mt-2">
-                      <label>Price</label>
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-5 my-auto text-right">
-                      <span className="py-2 white-text">
-                        <small>
-                          NFT should cost{" "}
-                          <img
-                            src={solicon}
-                            style={{ display: "inline-block" }}
-                            className="sol-icon"
+                      <div className="row">
+                        <div className="col-xs-12 col-sm-12 col-md-4 mb-2 mt-2">
+                          <label>Price</label>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-5 my-auto text-right">
+                          <span className="py-2 white-text">
+                            <small>
+                              NFT should cost{" "}
+                              <img
+                                src={solicon}
+                                style={{ display: "inline-block" }}
+                                className="sol-icon"
+                              />
+                            </small>
+                          </span>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-3 mb-2 mt-2">
+                          <input
+                            type="number"
+                            id="priceset"
+                            name="amountInputPrice<?php echo $i; ?>"
+                            min="0"
+                            max="1000"
+                            value={item.nftCost > 0 ? item.nftCost : 0}
+                            onChange={(e) => {
+                              const objIndex = formData.collection.findIndex(
+                                (obj) => obj.nftCost === item.nftCost
+                              );
+                              // console.log(objIndex);
+                              setFormData({
+                                ...formData,
+                                collection: [
+                                  ...formData.collection.slice(0, objIndex),
+                                  {
+                                    ...formData.collection[objIndex],
+                                    nftCost: e.target.value,
+                                  },
+                                  ...formData.collection.slice(objIndex + 1),
+                                ],
+                              });
+                            }}
+                            required
                           />
-                        </small>
-                      </span>
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-3 mb-2 mt-2">
-                      <input
-                        type="number"
-                        id="priceset"
-                        name="amountInputPrice<?php echo $i; ?>"
-                        min="0"
-                        max="1000"
-                        value={rangeSlider}
-                        onChange={(e) => setRangeSlider(e.target.value)}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="mb-3 mt-3">
-                    <input
-                      type="range"
-                      className="w100"
-                      id="priceRange"
-                      name="10"
-                      min="0"
-                      value={rangeSlider>0? rangeSlider : 0}
-                      onChange={(e)=>{setRangeSlider(e.target.value)}}
-                      max="1000"
-                    />
-                  </div>
-
-                  <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-2 mb-2 mt-2">
-                      <label>Rarity</label>
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-5 my-auto text-right">
-                      <span className="py-2 white-text">
-                        <small>NFT should be within top</small>
-                      </span>
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-3 mb-2 mt-2">
-                      <div className="btn-group" style={{ width: "100%" }}>
-                        <button
-                          className="btn btn-drop dropdown-toggle shadow-none"
-                          type="button"
-                          id="defaultDropdown"
-                          data-bs-toggle="dropdown"
-                          data-bs-auto-close="true"
-                          aria-expanded="false"
-                          onClick={()=>{setShowRarity(!showRarity)}}
-                        >
-                          {rarity}
-                        </button>
-                        {showRarity?(
-                        <ul
-                          className="dropdown-menu select-traits"
-                          style={{ display: "block", marginTop: "40px" }}
-                        >
-                          <li>
-                            <a
-                              className="dropdown-item getrarity hover:cursor-pointer "
-                              data-id="<?php echo $i; ?>"
-                              onClick={()=>{
-                                setRarity('Common')
-                                setShowRarity(false)
-                              }}
-                            >
-                              Common
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item getrarity hover:cursor-pointer "
-                              data-id="<?php echo $i; ?>"
-                              onClick={()=>{
-                                setRarity('Rare')
-                                setShowRarity(false)
-                              }}
-                            >
-                              Rare
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item getrarity hover:cursor-pointer "
-                              data-id="<?php echo $i; ?>"
-                              onClick={()=>{
-                                setRarity('Super Rare')
-                                setShowRarity(false)
-                              }}
-                            >
-                              Super Rare
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item getrarity hover:cursor-pointer "
-                              data-id="<?php echo $i; ?>"
-                              onClick={()=>{
-                                setRarity('Legendary')
-                                setShowRarity(false)
-                              }}
-                            >
-                              Legendary
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item getrarity hover:cursor-pointer "
-                              data-id="<?php echo $i; ?>"
-                              onClick={()=>{
-                                setRarity('')
-                                setShowRarity(false)
-                              }}
-                            >
-                              Mythic
-                            </a>
-                          </li>
-                        </ul>
-                        ):null}
+                        </div>
+                      </div>
+                      <div className="mb-3 mt-3">
                         <input
-                          type="text"
-                          name="rarityinput<?php echo $i; ?>"
-                          className="rarityinput<?php echo $i; ?> hidden-input shadow-none"
+                          type="range"
+                          className="w100"
+                          id="priceRange"
+                          name="10"
+                          min="0"
+                          value={item.nftCost > 0 ? item.nftCost : 0}
+                          onChange={(e) => {
+                            const objIndex = formData.collection.findIndex(
+                              (obj) => obj.nftCost === item.nftCost
+                            );
+                            // console.log(objIndex);
+                            setFormData({
+                              ...formData,
+                              collection: [
+                                ...formData.collection.slice(0, objIndex),
+                                {
+                                  ...formData.collection[objIndex],
+                                  nftCost: e.target.value,
+                                },
+                                ...formData.collection.slice(objIndex + 1),
+                              ],
+                            });
+                          }}
+                          max="1000"
                         />
                       </div>
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-2 my-auto text-right">
-                      <span className="py-2 white-text">
-                        <small>by rarity</small>
-                      </span>
-                    </div>
-                  </div>
 
-                  <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-8 mb-2 mt-2">
-                      <label>Trait Filter</label>
-                      <input
-                        type="checkbox"
-                        id="traitFilter<?php echo $i; ?>"
-                        name="traitFilter<?php echo $i; ?>"
-                      />
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-4 mb-2 mt-2">
-                      <div className="btn-group" style={{ width: "100%" }}>
-                        <button
-                          className="btn btn-drop dropdown-toggle shadow-none"
-                          type="button"
-                          id="defaultDropdown"
-                          data-bs-toggle="dropdown"
-                          data-bs-auto-close="true"
-                          aria-expanded="false"
-                          onClick={()=> setShowTrait(!showTrait)}
-                        >
-                          {traits}
-                        </button>
-                        <ul
-                          className="dropdown-menu select-traits"
-                          aria-labelledby="defaultDropdown"
-                          style={{display:showTrait?'block':'none', marginTop: "43px"}}
-                        >
-                          <li>
-                            <a
-                              className="dropdown-item gettraits"
-                              data-id="<?php echo $i; ?>"
-                              onClick={()=>{
-                                setShowTrait(false)
-                                setTraits('Trait 1')
+                      <div className="row">
+                        <div className="col-xs-12 col-sm-12 col-md-2 mb-2 mt-2">
+                          <label>Rarity</label>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-5 my-auto text-right">
+                          <span className="py-2 white-text">
+                            <small>NFT should be within top</small>
+                          </span>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-3 mb-2 mt-2">
+                          <div className="btn-group" style={{ width: "100%" }}>
+                            <button
+                              className="btn btn-drop dropdown-toggle shadow-none"
+                              type="button"
+                              id="defaultDropdown"
+                              data-bs-toggle="dropdown"
+                              data-bs-auto-close="true"
+                              aria-expanded="false"
+                              onClick={() => {
+                                const objIndex = formData.collection.findIndex(
+                                  (obj) => obj.nftCost === item.nftCost
+                                );
+                                setFormData({
+                                  ...formData,
+                                  collection: [
+                                    ...formData.collection.slice(0, objIndex),
+                                    {
+                                      ...formData.collection[objIndex],
+                                      showRarity:
+                                        !formData.collection[objIndex]
+                                          .showRarity,
+                                      showTrait: false,
+                                    },
+                                    ...formData.collection.slice(objIndex + 1),
+                                  ],
+                                });
+                                // console.log(objIndex, index);
                               }}
                             >
-                              Trait 1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item gettraits"
-                              data-id="<?php echo $i; ?>"
-                              onClick={()=>{
-                                setShowTrait(false)
-                                setTraits('Trait 2')
+                              {item.rarity}
+                            </button>
+                            {item.showRarity ? (
+                              <ul
+                                className="dropdown-menu select-traits"
+                                style={{ display: "block", marginTop: "40px" }}
+                              >
+                                <li>
+                                  <a
+                                    className="dropdown-item getrarity hover:cursor-pointer "
+                                    data-id="<?php echo $i; ?>"
+                                    onClick={() => {
+                                      const objIndex =
+                                        formData.collection.findIndex(
+                                          (obj) => obj.nftCost === item.nftCost
+                                        );
+                                      // console.log(objIndex);
+                                      setFormData({
+                                        ...formData,
+                                        collection: [
+                                          ...formData.collection.slice(
+                                            0,
+                                            objIndex
+                                          ),
+                                          {
+                                            ...formData.collection[objIndex],
+                                            rarity: "Common",
+                                            showRarity: false,
+                                          },
+                                          ...formData.collection.slice(
+                                            objIndex + 1
+                                          ),
+                                        ],
+                                      });
+                                      setShowRarity(false);
+                                    }}
+                                  >
+                                    Common
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    className="dropdown-item getrarity hover:cursor-pointer "
+                                    data-id="<?php echo $i; ?>"
+                                    onClick={() => {
+                                      const objIndex =
+                                        formData.collection.findIndex(
+                                          (obj) => obj.nftCost === item.nftCost
+                                        );
+                                      // console.log(objIndex);
+                                      setFormData({
+                                        ...formData,
+                                        collection: [
+                                          ...formData.collection.slice(
+                                            0,
+                                            objIndex
+                                          ),
+                                          {
+                                            ...formData.collection[objIndex],
+                                            rarity: "Rare",
+                                            showRarity: false,
+                                          },
+                                          ...formData.collection.slice(
+                                            objIndex + 1
+                                          ),
+                                        ],
+                                      });
+                                      setShowRarity(false);
+                                    }}
+                                  >
+                                    Rare
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    className="dropdown-item getrarity hover:cursor-pointer "
+                                    data-id="<?php echo $i; ?>"
+                                    onClick={() => {
+                                      const objIndex =
+                                        formData.collection.findIndex(
+                                          (obj) => obj.nftCost === item.nftCost
+                                        );
+                                      // console.log(objIndex);
+                                      setFormData({
+                                        ...formData,
+                                        collection: [
+                                          ...formData.collection.slice(
+                                            0,
+                                            objIndex
+                                          ),
+                                          {
+                                            ...formData.collection[objIndex],
+                                            rarity: "Super Rare",
+                                            showRarity: false,
+                                          },
+                                          ...formData.collection.slice(
+                                            objIndex + 1
+                                          ),
+                                        ],
+                                      });
+                                      setShowRarity(false);
+                                    }}
+                                  >
+                                    Super Rare
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    className="dropdown-item getrarity hover:cursor-pointer "
+                                    data-id="<?php echo $i; ?>"
+                                    onClick={() => {
+                                      const objIndex =
+                                        formData.collection.findIndex(
+                                          (obj) => obj.nftCost === item.nftCost
+                                        );
+                                      // console.log(objIndex);
+                                      setFormData({
+                                        ...formData,
+                                        collection: [
+                                          ...formData.collection.slice(
+                                            0,
+                                            objIndex
+                                          ),
+                                          {
+                                            ...formData.collection[objIndex],
+                                            rarity: "Legendary",
+                                            showRarity: false,
+                                          },
+                                          ...formData.collection.slice(
+                                            objIndex + 1
+                                          ),
+                                        ],
+                                      });
+                                      setShowRarity(false);
+                                    }}
+                                  >
+                                    Legendary
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    className="dropdown-item getrarity hover:cursor-pointer "
+                                    data-id="<?php echo $i; ?>"
+                                    onClick={() => {
+                                      const objIndex =
+                                        formData.collection.findIndex(
+                                          (obj) => obj.nftCost === item.nftCost
+                                        );
+                                      // console.log(objIndex);
+                                      setFormData({
+                                        ...formData,
+                                        collection: [
+                                          ...formData.collection.slice(
+                                            0,
+                                            objIndex
+                                          ),
+                                          {
+                                            ...formData.collection[objIndex],
+                                            rarity: "Mythic",
+                                            showRarity: false,
+                                          },
+                                          ...formData.collection.slice(
+                                            objIndex + 1
+                                          ),
+                                        ],
+                                      });
+                                      setShowRarity(false);
+                                    }}
+                                  >
+                                    Mythic
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : null}
+                            <input
+                              type="text"
+                              name="rarityinput<?php echo $i; ?>"
+                              className="rarityinput<?php echo $i; ?> hidden-input shadow-none"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-2 my-auto text-right">
+                          <span className="py-2 white-text">
+                            <small>by rarity</small>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="row">
+                        <div className="col-xs-12 col-sm-12 col-md-8 mb-2 mt-2">
+                          <label>Trait Filter</label>
+                          <input
+                            type="checkbox"
+                            id="traitFilter<?php echo $i; ?>"
+                            name="traitFilter<?php echo $i; ?>"
+                          />
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-4 mb-2 mt-2">
+                          <div className="btn-group" style={{ width: "100%" }}>
+                            <button
+                              className="btn btn-drop dropdown-toggle shadow-none"
+                              type="button"
+                              id="defaultDropdown"
+                              data-bs-toggle="dropdown"
+                              data-bs-auto-close="true"
+                              aria-expanded="false"
+                              onClick={() => {
+                                setShowTrait(!showTrait);
+                                setShowRarity(false);
+                                const objIndex = formData.collection.findIndex(
+                                  (obj) => obj.nftCost === item.nftCost
+                                );
+                                setFormData({
+                                  ...formData,
+                                  collection: [
+                                    ...formData.collection.slice(0, objIndex),
+                                    {
+                                      ...formData.collection[objIndex],
+                                      showTrait:
+                                        !formData.collection[objIndex]
+                                          .showTrait,
+                                      showRarity: false,
+                                    },
+                                    ...formData.collection.slice(objIndex + 1),
+                                  ],
+                                });
                               }}
                             >
-                              Trait 2
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="dropdown-item gettraits"
-                              data-id="<?php echo $i; ?>"
-                              onClick={()=>{
-                                setShowTrait(false)
-                                setTraits('Trait 3')
+                              {item.trait}
+                            </button>
+                            <ul
+                              className="dropdown-menu select-traits"
+                              aria-labelledby="defaultDropdown"
+                              style={{
+                                display: item.showTrait ? "block" : "none",
+                                marginTop: "43px",
                               }}
                             >
-                              Trait 3
-                            </a>
-                          </li>
-                        </ul>
-                        <input
-                          type="text"
-                          name="traitsinput<?php echo $i; ?>"
-                          className="traitsinput<?php echo $i; ?> hidden-input shadow-none"
-                        />
+                              <li>
+                                <a
+                                  className="dropdown-item gettraits"
+                                  data-id="<?php echo $i; ?>"
+                                  onClick={() => {
+                                    const objIndex =
+                                      formData.collection.findIndex(
+                                        (obj) => obj.nftCost === item.nftCost
+                                      );
+                                    // console.log(objIndex);
+                                    setFormData({
+                                      ...formData,
+                                      collection: [
+                                        ...formData.collection.slice(
+                                          0,
+                                          objIndex
+                                        ),
+                                        {
+                                          ...formData.collection[objIndex],
+                                          trait: "Trait 1",
+                                          showTrait: false,
+                                        },
+                                        ...formData.collection.slice(
+                                          objIndex + 1
+                                        ),
+                                      ],
+                                    });
+                                    setShowTrait(false);
+                                  }}
+                                >
+                                  Trait 1
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="dropdown-item gettraits"
+                                  data-id="<?php echo $i; ?>"
+                                  onClick={() => {
+                                    const objIndex =
+                                      formData.collection.findIndex(
+                                        (obj) => obj.nftCost === item.nftCost
+                                      );
+                                    // console.log(objIndex);
+                                    setFormData({
+                                      ...formData,
+                                      collection: [
+                                        ...formData.collection.slice(
+                                          0,
+                                          objIndex
+                                        ),
+                                        {
+                                          ...formData.collection[objIndex],
+                                          trait: "Trait 2",
+                                          showTrait: false,
+                                        },
+                                        ...formData.collection.slice(
+                                          objIndex + 1
+                                        ),
+                                      ],
+                                    });
+                                    setShowTrait(false);
+                                  }}
+                                >
+                                  Trait 2
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="dropdown-item gettraits"
+                                  data-id="<?php echo $i; ?>"
+                                  onClick={() => {
+                                    const objIndex =
+                                      formData.collection.findIndex(
+                                        (obj) => obj.nftCost === item.nftCost
+                                      );
+                                    // console.log(objIndex);
+                                    setFormData({
+                                      ...formData,
+                                      collection: [
+                                        ...formData.collection.slice(
+                                          0,
+                                          objIndex
+                                        ),
+                                        {
+                                          ...formData.collection[objIndex],
+                                          trait: "Trait 3",
+                                          showTrait: false,
+                                        },
+                                        ...formData.collection.slice(
+                                          objIndex + 1
+                                        ),
+                                      ],
+                                    });
+                                    setShowTrait(false);
+                                  }}
+                                >
+                                  Trait 3
+                                </a>
+                              </li>
+                            </ul>
+                            <input
+                              type="text"
+                              name="traitsinput<?php echo $i; ?>"
+                              className="traitsinput<?php echo $i; ?> hidden-input shadow-none"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <hr className="hr-steps" />
+                      {/* <?php $i++; } } ?> */}
+                      <div
+                        className="row"
+                        style={{
+                          display:
+                            index === formData.collection.length - 1
+                              ? "block"
+                              : "none",
+                        }}
+                      >
+                        <div className="col-12 my-4">
+                          <p>
+                            <small>
+                              * If someone lists a NFT below your buying price
+                              and with your selected rarity and/or traits, your
+                              order will be executed and the extra funds you
+                              deposited will be credited to your wallet.
+                            </small>
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <hr className="hr-steps" />
-                  {/* <?php $i++; } } ?> */}
-                  <div className="row">
-                    <div className="col-12 my-4">
-                      <p>
-                        <small>
-                          * If someone lists a NFT below your buying price and
-                          with your selected rarity and/or traits, your order
-                          will be executed and the extra funds you deposited
-                          will be credited to your wallet.
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
-                {/* <!-- start previous / next buttons --> */}
-                <div className="form-footer d-flex">
-                  <button
-                    type="submit"
-                    id="nextBtn"
-                    className="btn btn-dark btn-md rounded-3 shadow-none inlineblock mt-3"
-                  >
-                    Next
-                  </button>
-                </div>
-                {/* <!-- end previous / next buttons --> */}
-              </form>
+                    {/* <!-- start previous / next buttons --> */}
+                    {/* <!-- end previous / next buttons --> */}
+                  </form>
+                );
+              })}
+              <div className="form-footer d-flex w-full justify-center items-center">
+                <button
+                  // type="submit"
+                  id="nextBtn"
+                  className="btn btn-dark btn-md rounded-3 shadow-none inlineblock mt-0 mb-4 w-4/5 font-semibold py-3  "
+                  style={{ fontSize: "1.2rem", fontWeight: "500" }}
+                  onClick={() => {
+                    setPage(page + 1);
+                  }}
+                >
+                  Next
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </main>
-      // footer
-      <footer>
+      {/* // footer */}
+      {/* <footer>
         <div className="container">
           <div className="footer gx-0">
             <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-4 row-cols-lg-4 row-cols-xxl-4 p-5 pb-0">
@@ -444,9 +716,9 @@ const Ordertwo = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
       {/* <!-- Back-to-top --> */}
-      <a
+      {/* <a
         href="#"
         type="button"
         className="btn btn-info btn-floating btn-md text-white shadow-none"
@@ -454,7 +726,7 @@ const Ordertwo = () => {
         style={{display: "block"}}
       >
         <i className="fas fa-arrow-up"></i>
-      </a>
+      </a> */}
       {/* <!-- JS --> */}
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"

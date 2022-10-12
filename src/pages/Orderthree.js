@@ -5,7 +5,8 @@ import solicon from "../assets/images/sol-icon.png";
 
 
 
-const Orderthree = () => {
+const Orderthree = ({page, setPage, formData}) => {
+    const total =  (eval(formData.nftCost) + eval(formData.nftCost/100));
   return (
     <div>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -30,11 +31,11 @@ const Orderthree = () => {
       />
 
       {/* <!-- Loading --> */}
-     <Loader/>
+     {/* <Loader/> */}
       {/* <!-- Header --> */}
       <header>
         {/* <!-- Main Navigation --> */}
-        <Nav/>
+        {/* <Nav/> */}
       </header>
       {/* <!-- Main --> */}
       <main className="container mt-5">
@@ -70,6 +71,9 @@ const Orderthree = () => {
                         id="prevBtn"
                         // onClick="history.back()"
                         className="absolute"
+                        onClick={() => {
+                            setPage(page - 1);
+                          }}
                       >
                         <i className="fa-solid fa-angle-left"></i>
                       </button>
@@ -115,7 +119,7 @@ const Orderthree = () => {
                               className="sol-icon mx-1"
                             />{" "}
                             <span id="show_price" className="summary-item">
-                              Item amount
+                              {formData.nftCost}
                             </span>
                           </td>
                         </tr>
@@ -133,7 +137,7 @@ const Orderthree = () => {
 												echo $_GET["rarityinput".$i];
 											}
 											?> */}
-                              Rarity value
+                              {formData.rarity}
                             </span>
                           </td>
                         </tr>
@@ -148,7 +152,7 @@ const Orderthree = () => {
                               className="sol-icon mx-1"
                             />{" "}
                             <span id="show_ordervalue" className="summary-item">
-                              Amount
+                              {formData.nftCost}
                             </span>
                           </td>
                         </tr>
@@ -163,7 +167,7 @@ const Orderthree = () => {
                               className="sol-icon mx-1"
                             />{" "}
                             <span id="show_fees" className="summary-item">
-                              fee
+                              {formData.nftCost/100}
                             </span>
                           </td>
                         </tr>
@@ -178,7 +182,7 @@ const Orderthree = () => {
                               className="sol-icon mx-1"
                             />{" "}
                             <span id="totalSOL" className="summary-item">
-                              Total
+                              {total}
                             </span>
                           </td>
                         </tr>
@@ -217,9 +221,12 @@ const Orderthree = () => {
                   {/* <!-- start previous / next buttons --> */}
                   <div className="form-footer d-flex">
                     <button
-                      type="submit"
+                    //   type="submit"
                       id="nextBtn"
                       className="btn btn-dark btn-md rounded-3 shadow-none inlineblock mt-3"
+                      onClick={() => {
+                        setPage(page + 1);
+                      }}
                     >
                       Approve Transaction
                     </button>
@@ -232,7 +239,7 @@ const Orderthree = () => {
         </div>
       </main>
       {/* <!-- Footer --> */}
-      <footer>
+      {/* <footer>
         <div className="container">
           <div className="footer gx-0">
             <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-4 row-cols-lg-4 row-cols-xxl-4 p-5 pb-0">
@@ -325,9 +332,9 @@ const Orderthree = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
       {/* <!-- Back-to-top --> */}
-      <a
+      {/* <a
         href="#"
         type="button"
         className="btn btn-info btn-floating btn-md text-white shadow-none"
@@ -335,7 +342,7 @@ const Orderthree = () => {
         style={{display: "block"}}
       >
         <i className="fas fa-arrow-up"></i>
-      </a>
+      </a> */}
       {/* <!-- JS --> */}
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
