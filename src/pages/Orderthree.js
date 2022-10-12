@@ -1,12 +1,23 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import Loader from "../components/Loader";
 import Nav from "../components/Nav";
 import solicon from "../assets/images/sol-icon.png";
 
+const Orderthree = ({ page, setPage, formData }) => {
+  // const total = eval(formData.nftCost) + eval(formData.nftCost / 100);
+  const [total, setTotalValue] = useState(0);
 
+  useEffect(() => {
+    let totalCalc = 0;
+    formData.collection.map((item) => {
+      totalCalc += (parseInt(item.nftCost) + (parseInt(item.nftCost) / 100));
+      // setTotalValue(total + parseInt(item.nftCost));
+      console.log(item.nftCost, totalCalc);
+      setTotalValue(totalCalc);
+    });
+  }, []);
+  console.log();
 
-const Orderthree = ({page, setPage, formData}) => {
-    const total =  (eval(formData.nftCost) + eval(formData.nftCost/100));
   return (
     <div>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,7 +42,7 @@ const Orderthree = ({page, setPage, formData}) => {
       />
 
       {/* <!-- Loading --> */}
-     {/* <Loader/> */}
+      {/* <Loader/> */}
       {/* <!-- Header --> */}
       <header>
         {/* <!-- Main Navigation --> */}
@@ -39,205 +50,223 @@ const Orderthree = ({page, setPage, formData}) => {
       </header>
       {/* <!-- Main --> */}
       <main className="container mt-5">
-        <div
-          className="mt-5 mb-4 aos-init gx-0 pb-4"
-        >
+        <div className="mt-5 mb-4 aos-init gx-0 pb-4">
           <div className="row row-cols-1 px-1 pt-4">
             <div className="col-sm-1 col-md-2"></div>
-            <div className="collections col-sm-10 col-md-8 col-xs-1" id="content">
+            <div
+              className="collections col-sm-10 col-md-8 col-xs-1"
+              id="content"
+            >
               <h3 className="mt-5 page-title text-center">Create New Order</h3>
-              <form id="createForm" action="./order-success.php">
-                {/* <!-- start step indicators --> */}
-                <div className="form-header d-flex mb-4">
-                  <span className="stepIndicator finish">
-                    <span className="title-form">Select Collection</span>
-                  </span>
-                  <span className="stepIndicator finish">
-                    Select Price & Rarity
-                  </span>
-                  <span className="stepIndicator active">Confirm Order</span>
-                </div>
-                {/* <!-- end step indicators --> */}
-
-                {/* <!-- step three --> */}
-                <div className="step">
-                  <div className="row mb-4">
-                    <div className="col-xs-12 col-sm-12 col-md-12 mt-2">
-                      <h3 className="text-center white-text summary-title">
-                        Summary
-                      </h3>
-                      <button
-                        type="button"
-                        id="prevBtn"
-                        // onClick="history.back()"
-                        className="absolute"
-                        onClick={() => {
-                            setPage(page - 1);
-                          }}
-                      >
-                        <i className="fa-solid fa-angle-left"></i>
-                      </button>
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-10 mt-2">
-                      <div id="getProjectLast" className="float-right"></div>
-                    </div>
-                  </div>
-                  <div className="pt-5">
-                    <div className="row mb-4">
-                      {/* <?php $array = explode(",", $_GET["collections"]);
-									$i = 0;
-									$totalperitemTotal = 0;
-									$totalperitem = 0;
-									$arraycount = count($array)-1;
-									foreach ($array as $item) {
-										if($arraycount > $i) {
-										$fee = ($_GET["amountPrice".$i]) / 100;
-										$totalperitem = $_GET["amountPrice".$i] + $fee;
-								?> */}
-
-                      <table width="100%">
-                        <tbody>
-                        <tr>
-                          <td className="p-1"></td>
-                          <td className="p-1 text-right">
-                            <img
-                              src="./assets/images/projects/<?php echo str_replace(' ', '', strtolower($item));?>.png"
-                              className="mx-2 searchimg inline-block "
-                              
-                            />
-                            Item
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="p-1">
-                            <label className="summary">Max Price</label>
-                          </td>
-                          <td className="p-1 text-right">
-                            <img
-                              src={solicon}
-                              style={{display: "inline-block"}}
-                              className="sol-icon mx-1"
-                            />{" "}
-                            <span id="show_price" className="summary-item">
-                              {formData.nftCost}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="p-1">
-                            <label className="summary">Min Rarity</label>
-                          </td>
-                          <td className="p-1 text-right">
-                            <span id="show_rarity" className="summary-item">
-                              {/* <?php 
-											$rarityval = $_GET["rarityinput".$i];
-											if ($rarityval == "") {
-												echo "Any"; 
-											} else {
-												echo $_GET["rarityinput".$i];
-											}
-											?> */}
-                              {formData.rarity}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="p-1">
-                            <label className="summary">Order Value</label>
-                          </td>
-                          <td className="p-1 text-right">
-                            <img
-                              src={solicon}
-                              style={{display: "inline-block"}}
-                              className="sol-icon mx-1"
-                            />{" "}
-                            <span id="show_ordervalue" className="summary-item">
-                              {formData.nftCost}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="p-1">
-                            <label className="summary">Fees</label>
-                          </td>
-                          <td className="p-1 text-right">
-                            <img
-                              src={solicon}
-                              style={{display: "inline-block"}}
-                              className="sol-icon mx-1"
-                            />{" "}
-                            <span id="show_fees" className="summary-item">
-                              {formData.nftCost/100}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="p-1">
-                            <label className="summary">SOL to deposit</label>
-                          </td>
-                          <td className="p-1 text-right">
-                            <img
-                              src={solicon}
-                              style={{display: "inline-block"}}
-                              className="sol-icon mx-1"
-                            />{" "}
-                            <span id="totalSOL" className="summary-item">
-                              {total}
-                            </span>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </table>
-                      <hr className="hr-steps" />
-                      {/* <?php 
-									$totalperitemTotal = $totalperitemTotal + $totalperitem;
-									} $i++;  }
-									 
-									?> */}
-                      <table width="100%">
-                        <tbody>
-                        <tr className="totals">
-                          <td className="p-1">
-                            <label className="text-yellow">
-                              Total SOL to deposit
-                            </label>
-                          </td>
-                          <td className="p-1 text-right">
-                            <img
-                              src={solicon}
-                              style={{display: "inline-block"}}
-                              className="sol-icon mx-1"
-                            />{" "}
-                            <span id="totalSOL" className="summary-item">
-                              Total per item
-                            </span>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  {/* <!-- start previous / next buttons --> */}
-                  <div className="form-footer d-flex">
-                    <button
-                    //   type="submit"
-                      id="nextBtn"
-                      className="btn btn-dark btn-md rounded-3 shadow-none inlineblock mt-3"
-                      onClick={() => {
-                        setPage(page + 1);
-                      }}
+              {formData.collection.map((item, index) => {
+                return (
+                  <form id="createForm" className="mbottom" key={index}>
+                    {/* <!-- start step indicators --> */}
+                    <div
+                      className="form-header mb-4"
+                      style={{ display: index === 0 ? "flex" : "none" }}
                     >
-                      Approve Transaction
-                    </button>
-                  </div>
-                  {/* <!-- end previous / next buttons --> */}
-                </div>
-              </form>
+                      <span className="stepIndicator finish">
+                        <span className="title-form">Select Collection</span>
+                      </span>
+                      <span className="stepIndicator finish">
+                        Select Price & Rarity
+                      </span>
+                      <span className="stepIndicator active">
+                        Confirm Order
+                      </span>
+                    </div>
+                    {/* <!-- end step indicators --> */}
+
+                    {/* <!-- step three --> */}
+                    <div className="step">
+                      <div className="row mb-4">
+                        <div className="col-xs-12 col-sm-12 col-md-12 mt-2">
+                          <h3
+                            className="text-center white-text summary-title"
+                            style={{ display: index === 0 ? "block" : "none" }}
+                          >
+                            Summary
+                          </h3>
+                          <button
+                            type="button"
+                            id="prevBtn"
+                            // onClick="history.back()"
+                            className="absolute"
+                            onClick={() => {
+                              setPage(page - 1);
+                            }}
+                            style={{ display: index === 0 ? "block" : "none" }}
+                          >
+                            <i className="fa-solid fa-angle-left"></i>
+                          </button>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-10 mt-2">
+                          <div
+                            id="getProjectLast"
+                            className="float-right"
+                          ></div>
+                        </div>
+                      </div>
+                      <div className="">
+                        <div className="row mb-4">
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td className="p-1"></td>
+                                <td className="p-1 text-right">
+                                  <img
+                                    src={`${item.nft
+                                      .toLowerCase()
+                                      .split("")
+                                      .filter((e) => e.trim().length)
+                                      .join("")}.png`}
+                                    className="mx-2 searchimg inline-block "
+                                  />
+                                  {item.nft}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td className="p-1">
+                                  <label className="summary">Max Price</label>
+                                </td>
+                                <td className="p-1 text-right">
+                                  <img
+                                    src={solicon}
+                                    style={{ display: "inline-block" }}
+                                    className="sol-icon mx-1"
+                                  />{" "}
+                                  <span
+                                    id="show_price"
+                                    className="summary-item"
+                                  >
+                                    {item.nftCost}
+                                  </span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td className="p-1">
+                                  <label className="summary">Min Rarity</label>
+                                </td>
+                                <td className="p-1 text-right">
+                                  <span
+                                    id="show_rarity"
+                                    className="summary-item"
+                                  >
+                                    {item.rarity}
+                                  </span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td className="p-1">
+                                  <label className="summary">Order Value</label>
+                                </td>
+                                <td className="p-1 text-right">
+                                  <img
+                                    src={solicon}
+                                    style={{ display: "inline-block" }}
+                                    className="sol-icon mx-1"
+                                  />{" "}
+                                  <span
+                                    id="show_ordervalue"
+                                    className="summary-item"
+                                  >
+                                    {item.nftCost}
+                                  </span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td className="p-1">
+                                  <label className="summary">Fees</label>
+                                </td>
+                                <td className="p-1 text-right">
+                                  <img
+                                    src={solicon}
+                                    style={{ display: "inline-block" }}
+                                    className="sol-icon mx-1"
+                                  />{" "}
+                                  <span id="show_fees" className="summary-item">
+                                    {item.nftCost / 100}
+                                  </span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td className="p-1">
+                                  <label className="summary">
+                                    SOL to deposit
+                                  </label>
+                                </td>
+                                <td className="p-1 text-right">
+                                  <img
+                                    src={solicon}
+                                    style={{ display: "inline-block" }}
+                                    className="sol-icon mx-1"
+                                  />{" "}
+                                  <span id="totalSOL" className="summary-item">
+                                    {eval(item.nftCost) +
+                                      eval(item.nftCost / 100)}
+                                  </span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <hr className="hr-steps" />
+
+                          <table width="100%">
+                            <tbody
+                              style={{
+                                display:
+                                  index === formData.collection.length - 1
+                                    ? ""
+                                    : "none",
+                              }}
+                            >
+                              <tr className="totals">
+                                <td className="p-1">
+                                  <label className="text-yellow">
+                                    Total SOL to deposit
+                                  </label>
+                                </td>
+                                <td className="p-1 text-right">
+                                  <img
+                                    src={solicon}
+                                    style={{ display: "inline-block" }}
+                                    className="sol-icon mx-1"
+                                  />{" "}
+                                  <span id="totalSOL" className="summary-item">
+                                    {total}
+                                  </span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+                      {/* <!-- start previous / next buttons --> */}
+                      {/* <!-- end previous / next buttons --> */}
+                    </div>
+                  </form>
+                );
+              })}
+              <div className="form-footer d-flex w-full justify-center items-center">
+                <button
+                  //   type="submit"
+                  id="nextBtn"
+                  className="btn btn-dark btn-md rounded-3 shadow-none inlineblock mt-0 mb-4 w-4/5 font-semibold py-3"
+                  style={{ fontSize: "1.2rem", fontWeight: "500" }}
+                  onClick={() => {
+                    setPage(page + 1);
+                  }}
+                >
+                  Approve Transaction
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </main>
+
       {/* <!-- Footer --> */}
       {/* <footer>
         <div className="container">
@@ -347,7 +376,6 @@ const Orderthree = ({page, setPage, formData}) => {
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-     
       ></script>
       <script src="./assets/js/bootstrap.bundle.min.js"></script>
       <script src="./assets/js/aos.js"></script>

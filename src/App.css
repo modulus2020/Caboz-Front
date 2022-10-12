@@ -26,3 +26,7 @@
 #sol-icon{
     display: inline-block;
 }
+
+.mbottom{
+    margin: 5px auto!important;
+}

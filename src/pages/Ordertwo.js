@@ -1,27 +1,27 @@
 import { React, useState } from "react";
 import solicon from "../assets/images/sol-icon.png";
-import deGods from "../assets/images/projects/degods.png";
-import InkworkLabs from "../assets/images/projects/inkworklabs.png";
-import blockSmith from "../assets/images/projects/blocksmithlabs.png";
-import CetsonCreck from "../assets/images/projects/cetsoncreck.png";
-import OkayBears from "../assets/images/projects/okaybears.png";
-import TrippingApe from "../assets/images/projects/trippinapetribe.png";
-import aurory from "../assets/images/projects/aurory.png";
-import VandalCity from "../assets/images/projects/vandalcity.png";
-import GothicDegenerates from "../assets/images/projects/gothicdegens.png";
-import degenFatCat from "../assets/images/projects/degenfatcats.png";
-import justap from "../assets/images/projects/justape.png";
-import primates from "../assets/images/projects/primates.png";
-import DegenerateApe from "../assets/images/projects/degenerateapeacademy.png";
-import Froots from "../assets/images/projects/froots.png";
+// import deGods from "../assets/images/projects/degods.png";
+// import InkworkLabs from "../assets/images/projects/inkworklabs.png";
+// import blockSmith from "../assets/images/projects/blocksmithlabs.png";
+// import CetsonCreck from "../assets/images/projects/cetsoncreck.png";
+// import OkayBears from "../assets/images/projects/okaybears.png";
+// import TrippingApe from "../assets/images/projects/trippinapetribe.png";
+// import aurory from "../assets/images/projects/aurory.png";
+// import VandalCity from "../assets/images/projects/vandalcity.png";
+// import GothicDegenerates from "../assets/images/projects/gothicdegens.png";
+// import degenFatCat from "../assets/images/projects/degenfatcats.png";
+// import justap from "../assets/images/projects/justape.png";
+// import primates from "../assets/images/projects/primates.png";
+// import DegenerateApe from "../assets/images/projects/degenerateapeacademy.png";
+// import Froots from "../assets/images/projects/froots.png";
 
 const Ordertwo = ({ page, setPage, formData, setFormData }) => {
-  const historyback = () => {};
-  const [traits, setTraits] = useState("Select Traits");
-  const [rarity, setRarity] = useState("Select Rarity");
-  const [showTrait, setShowTrait] = useState(false);
-  const [showRarity, setShowRarity] = useState(false);
-  const [rangeSlider, setRangeSlider] = useState(0);
+  // const historyback = () => {};
+  // const [traits, setTraits] = useState("Select Traits");
+  // const [rarity, setRarity] = useState("Select Rarity");
+  // const [showTrait, setShowTrait] = useState(false);
+  // const [showRarity, setShowRarity] = useState(false);
+  // const [rangeSlider, setRangeSlider] = useState(0);
   return (
     <div>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -264,7 +264,7 @@ const Ordertwo = ({ page, setPage, formData, setFormData }) => {
                                           ),
                                         ],
                                       });
-                                      setShowRarity(false);
+                                      // setShowRarity(false);
                                     }}
                                   >
                                     Common
@@ -297,7 +297,7 @@ const Ordertwo = ({ page, setPage, formData, setFormData }) => {
                                           ),
                                         ],
                                       });
-                                      setShowRarity(false);
+                                      // setShowRarity(false);
                                     }}
                                   >
                                     Rare
@@ -330,7 +330,7 @@ const Ordertwo = ({ page, setPage, formData, setFormData }) => {
                                           ),
                                         ],
                                       });
-                                      setShowRarity(false);
+                                      // setShowRarity(false);
                                     }}
                                   >
                                     Super Rare
@@ -363,7 +363,7 @@ const Ordertwo = ({ page, setPage, formData, setFormData }) => {
                                           ),
                                         ],
                                       });
-                                      setShowRarity(false);
+                                      // setShowRarity(false);
                                     }}
                                   >
                                     Legendary
@@ -396,7 +396,7 @@ const Ordertwo = ({ page, setPage, formData, setFormData }) => {
                                           ),
                                         ],
                                       });
-                                      setShowRarity(false);
+                                      // setShowRarity(false);
                                     }}
                                   >
                                     Mythic
@@ -437,8 +437,8 @@ const Ordertwo = ({ page, setPage, formData, setFormData }) => {
                               data-bs-auto-close="true"
                               aria-expanded="false"
                               onClick={() => {
-                                setShowTrait(!showTrait);
-                                setShowRarity(false);
+                                // setShowTrait(!showTrait);
+                                // setShowRarity(false);
                                 const objIndex = formData.collection.findIndex(
                                   (obj) => obj.nftCost === item.nftCost
                                 );
@@ -495,7 +495,7 @@ const Ordertwo = ({ page, setPage, formData, setFormData }) => {
                                         ),
                                       ],
                                     });
-                                    setShowTrait(false);
+                                    // setShowTrait(false);
                                   }}
                                 >
                                   Trait 1
@@ -528,7 +528,7 @@ const Ordertwo = ({ page, setPage, formData, setFormData }) => {
                                         ),
                                       ],
                                     });
-                                    setShowTrait(false);
+                                    // setShowTrait(false);
                                   }}
                                 >
                                   Trait 2
@@ -561,7 +561,7 @@ const Ordertwo = ({ page, setPage, formData, setFormData }) => {
                                         ),
                                       ],
                                     });
-                                    setShowTrait(false);
+                                    // setShowTrait(false);
                                   }}
                                 >
                                   Trait 3
